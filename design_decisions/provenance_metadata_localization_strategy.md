@@ -2,11 +2,12 @@
 
 ## Background
 
-The Research Portal and DACO portal will both be bilingual (English/French). However, the current data model, particularly at the provenance level, does not include localization planning. This creates a user experience issue: when viewing the Research Portal in French, the interface would be in French but the data catalogue entries would remain in English, creating an inconsistent experience.
+The Research Portal and DACO portal will both be bilingual (English/French). However, the current data model does not include localization. This creates a user experience issue: when viewing the Research Portal in French, the interface would be in French but the data catalogue entries would remain in English, creating an inconsistent experience.
 
 ## The Problem
 
 Someone or something needs to translate at least the provenance portion of the metadata (study-level information). The key questions were:
+- What data model fields require translation?
 - Who should be responsible for providing translations?
 - Should data submitters be involved?
 - How do we handle projects that lack capacity for translation?
@@ -54,6 +55,7 @@ flowchart TD
 ### Technical Implementation
 
 The data model will need to be updated to include fields for localized content, allowing storage of both English and French versions of metadata.
+Data model fields that have a predefined list of options need to be updated to include both French and English options.
 
 ## Rationale
 
