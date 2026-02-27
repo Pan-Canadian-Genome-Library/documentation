@@ -18,6 +18,9 @@ To create an Enrollment Flow:
 3. Choose a working enrollment flow and click  "Duplicate". The three default flows (see above note) are all "known good", if you aren't sure. 
 4. Fill in the required fields:
     - Name: A descriptive name for the flow (e.g., "Add to PCGL:dev:infra:admin" or "Invite PCGL Data Submitter").
+    - Petitioner Enrollment Authorization: to define what groups can initiate this enrollment flow. To limit to a specific group:
+        - set to "CO Group Member"
+        - select the group from the "Group" pulldown 
     - Email Confirmation Mode: leave as default "Review"
 5. Select "Edit Enrollment Attributes" at the top of the screen and then "Add Enrollment Attribute" to add whatever attributes you want to use for user identification. The defaults are Name, Email, Affiliation. Don't remove these. Recommended:
     - Name (default settings, keep these):
