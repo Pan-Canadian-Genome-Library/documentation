@@ -11,7 +11,7 @@ In COManage, "Enrollment Flows" are used to invite users and (optionally) automa
 
 Reference: See the [COManage documentation for enrollment flows](https://spaces.at.internet2.edu/display/COmanage/Registry+Enrollment+Flow+Configuration). 
 
-To create an new Enrollment Flow:
+To create an Enrollment Flow:
 
 1. Log in to the COManage admin interface.
 2. Navigate to "Configuration" in the left-hand menu and then click on "Enrollment Flows".
@@ -66,7 +66,11 @@ Do not skip point 6, or the group membership will not show up in your ID Token c
 
 The PCGL dev and staging environments use the `test` deployment of COManage and the production environments use the `prod` deployment. Therefore, testing enrollment flows should proceed as follows:
 
-* create the enrollment flow on [test COManage](https://registry-test.alliancecan.ca/registry/) and test on dev systems
-* if working as expected, test the enrollment flow on staging systems
+* create or edit the enrollment flow on [test COManage](https://registry-test.alliancecan.ca/registry/) and test it on dev systems
+* if working as expected, test the same enrollment flow on staging systems
 * if working as expected, copy the enrollment flow to [prod COManage](https://registry.alliancecan.ca/registry/)
     * there is no means to automatically copy an enrollment flow from one COManage instance to another (yet - coming in next version!). We recommend you have the test and prod windows open side-by-side to verify that the flows are the same. 
+
+## Restoring default enrollment flows
+
+If you have accidentally edited one of the default enrollment flows (`Invite a collaborator`, `Link another account` and `Self Signup With Approval`), you can restore them using the "Add / Restore Default Templates" option in the Enrollment flow configuration. This will not affect other flows. 
