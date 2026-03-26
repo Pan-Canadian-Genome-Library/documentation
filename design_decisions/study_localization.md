@@ -22,6 +22,37 @@
 - As done currently, PCGL Admin submits the Study entity (in either English or French).
 - New requirement: PCGL Admin would also be required to submit the StudyTranslation  entity in the corresponding language by indicating either “eng_ca” or “fr_ca” in the “language_id” field.
 
+```mermaid
+  erDiagram
+ 
+    STUDY||--|{ STUDYTRANSLATION :contains
+    STUDY {
+    	string study_id
+    	string study_name
+        string study_description
+        string program_name
+        string keywords
+        string status
+        string context
+        string domain
+        string dac_id
+        string participant_criteria
+        string principal_investigators
+        string lead_organizations
+        string collaborators
+        string funding_sources
+        string publication_links
+    }
+    STUDYTRANSLATION {
+       string study_id
+       string language_id
+       string study_description
+       string program_name
+       string keywords
+       string participant_criteria
+       string funding_sources
+    }
+```
 
 ### Benefits
 
