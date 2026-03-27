@@ -24,10 +24,10 @@
 
 ```mermaid
   erDiagram
- 
+    direction LR 
     STUDY||--|{ STUDYTRANSLATION :contains
     STUDY {
-    	string study_id
+    	string study_id PK
     	string study_name
         string study_description
         string program_name
@@ -44,8 +44,8 @@
         string publication_links
     }
     STUDYTRANSLATION {
-       string study_id
-       string language_id
+       string study_id PK, FK
+       string language_id FK
        string study_description
        string program_name
        string keywords
