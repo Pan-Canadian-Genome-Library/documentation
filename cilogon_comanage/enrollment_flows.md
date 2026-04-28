@@ -5,6 +5,8 @@ In COManage, "Enrollment Flows" are used to invite users and (optionally) automa
 
 ## Creating enrollment flows 
 
+There is a list of existing enrollment flows and their purposes in [enrollment_flow_list.md](enrollment_flow_list).
+
 >[!IMPORTANT]
 1. Do not delete the template enrollmnent flows `Invite a collaborator`, `Link another account` and `Self Signup With Approval`. These are the flows that ship with COManager and are guaranteed to work.  
 2. Always create enrollment flows by copying a known working flow and making modifications, rather than creating flows from scratch. The template flows are a good choice. 
@@ -69,7 +71,7 @@ Do not skip point 6, or the group membership will not show up in your ID Token c
 
 The PCGL dev and staging environments use the `test` deployment of COManage and the production environments use the `prod` deployment. Therefore, testing enrollment flows should proceed as follows:
 
-* create or edit the enrollment flow on [test COManage](https://registry-test.alliancecan.ca/registry/) and test it on dev systems
+* create or edit the enrollment flow on [test COManage](https://registry-test.alliancecan.ca/registry/) and test it on dev systems. If creating a new flow intended to be copied to prod, the name should start with `PCGL`.
 * if working as expected, test the same enrollment flow on staging systems
 * if working as expected, copy the enrollment flow to [prod COManage](https://registry.alliancecan.ca/registry/)
     * there is no means to automatically copy an enrollment flow from one COManage instance to another (yet - coming in next version!). We recommend you have the test and prod windows open side-by-side to verify that the flows are the same. 
