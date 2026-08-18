@@ -19,7 +19,7 @@ and associated enrollment flows following the [enrollment flow documention](../c
 register a Study). Note that dac_id is an optional property, as Studies can be registered without specifying a DAC. 
 * **Submission**: when registering a Study in authz, include the `dac_id` in the POST body. If the DAC for a Study changes (including adding a previously absent `dac_id`), update 
 the authz study registration accordingly.
-* **Authz**: modify study endpoints to allow list / create / delete of dac authorizations, ensuring that only DAC members for the specific study can view authorizations, and only DAC chairs can add / delete. Users can GET their own authorizations.  
+* **Authz**: modify study endpoints to allow list / create / delete of dac authorizations, ensuring that only DAC members for the specific study can view authorizations, and only DAC chairs can add / delete.  
 `/user/<id>/access_approval/<study_id>`
 * **DACO Portal**: call the `user` endpoint to determine the COManage groups for the user, including if the user is a member or chair of a DAC, and use this information to determe what applications are viewable / editable by the user.  
 
@@ -34,3 +34,5 @@ If the Bearer token does not identify a Chair for the DAC associated with the st
 Similarly, a DAC Chair can revoke a DAC authorization using a DELETE to `/study/study_id/dac_authorizations/`. 
 
 A DAC Chair or Member can list authorizations using GET `/study/study_id/dac_authorizations`.  
+
+ 
