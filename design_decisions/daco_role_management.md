@@ -19,8 +19,7 @@ and associated enrollment flows following the [enrollment flow documention](../c
 register a Study). Note that dac_id is an optional property, as Studies can be registered without specifying a DAC. 
 * **Submission**: when registering a Study in authz, include the `dac_id` in the POST body. If the DAC for a Study changes (including adding a previously absent `dac_id`), update 
 the authz study registration accordingly.
-* **Authz**: modify study endpoints to allow list / create / delete of dac authorizations, ensuring that only DAC members for the specific study can view authorizations, and only DAC chairs can add / delete.  
-`/user/<id>/access_approval/<study_id>`
+* **Authz**: modify study endpoints to allow list / create / delete of dac authorizations, ensuring that only DAC members for the specific study can view authorizations, and only DAC chairs can add / delete: `/study/study_id/dac_authorizations`
 * **DACO Portal**: call the `user` endpoint to determine the COManage groups for the user, including if the user is a member or chair of a DAC, and use this information to determe what applications are viewable / editable by the user.  
 
 ## Implementation
@@ -35,4 +34,9 @@ Similarly, a DAC Chair can revoke a DAC authorization using a DELETE to `/study/
 
 A DAC Chair or Member can list authorizations using GET `/study/study_id/dac_authorizations`.  
 
- 
+## Deprecated endpoints
+
+* POST /study/study_id: this is a renaming to /study/study_id/dac_authorizations
+* POST /user/{pcgl_id}: this can be reframed as POST /study/study_id/dac_authorizations
+* DELETE /user/{pcgl_id}/study/{study_id}: this can be reframed as DELETE /study/study_id/dac_authorizations
+* GET /user/{pcgl_id}/study/{study_id}: this can be reframed as a call to /allowed (i.e. asking if a user is allowed to GET on a study retrieval endpoint)
