@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "terms_conditions": {
+      "url": "/terms-and-conditions",
+      "children": {
+        "text": "Terms & Conditions"
+      }
+    },
+    "logo": {
+      "src": "/assets/images/company-logo-light.svg",
+      "alt": "Acme Corporation Logo",
+      "width": 180,
+      "height": 48
+    },
+    "variant": "dark-mode"
+  },
+  "navigation": [
+    {
+      "renderTitle": {
+        "text": "Products"
+      },
+      "renderLinks": {
+        "items": [
+          {
+            "url": "/products/platform",
+            "children": { "text": "Our Platform" }
+          },
+          {
+            "url": "/products/pricing",
+            "children": { "text": "Pricing" }
+          },
+          {
+            "url": "/products/integrations",
+            "children": { "text": "Integrations" }
+          }
+        ]
+      }
+    },
+    {
+      "renderTitle": {
+        "text": "Resources"
+      },
+      "renderLinks": {
+        "items": [
+          {
+            "url": "/blog",
+            "children": { "text": "Blog" }
+          },
+          {
+            "url": "/documentation",
+            "children": { "text": "Documentation" }
+          },
+          {
+            "url": "/community",
+            "children": { "text": "Community Forum" }
+          }
+        ]
+      }
+    },
+    {
+      "renderTitle": {
+        "text": "Company"
+      },
+      "renderLinks": {
+        "items": [
+          {
+            "url": "/about",
+            "children": { "text": "About Us" }
+          },
+          {
+            "url": "/careers",
+            "children": { "text": "Careers" }
+          },
+          {
+            "url": "/contact",
+            "children": { "text": "Contact Us" }
+          }
+        ]
+      }
+    }
+  ]
+}
