@@ -11,19 +11,19 @@ This is a mix of concepts between [atomic design][atomic-design-brad-frost] and 
 
 
 Pages
-: Final User interface, fusions the template and the content.
+: Final user interface that fuses the template and the content.
 
 Templates
-: Template consists of elements and groups of elements without data.
+: Templates consist of elements and groups of elements without data.
 
-Landmarks (Organisms):
-: Complex user interfaces, they are subsections of a page, and we want the user to be able to navigate directly to them.
+Landmarks (Organisms)
+: Complex user interfaces; these are subsections of a page that we want the user to be able to navigate directly to.
 
 Regions (Molecules)
-: They are a group of elements that have a single responsibility.
+: A group of elements that has a single responsibility.
 
 Components (Atoms)
-: Non divisible element, part of the page.
+: A non-divisible element that is part of the page.
 
 We based our decisions on well-known public organizations and their commitment to accessibility, so the list is not limited to: 
  - [The Government of Canada][canada]
@@ -32,7 +32,7 @@ We based our decisions on well-known public organizations and their commitment t
  - [MDN][MDN]
  - [Splunk][splunk]
 
-You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
+You may merge the Pull Request once you have the sign-off of two other developers, or if you 
    do not have permission to do that, you may request the second reviewer to merge it for you.
 
 ## Code of Conduct

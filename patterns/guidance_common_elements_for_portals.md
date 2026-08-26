@@ -1,8 +1,8 @@
 _Under construction_ 🏗️
 
-# Guidance for common elements across portals.
+# Guide for common elements across portals.
 
-We value contributions and feedback and want you to contribute effectively. To make your contribution experience as smooth as possible [please reach out to us first][contrib].
+We value contributions and feedback and want you to contribute effectively. To make your contribution experience as smooth as possible, [please reach out to us first][contrib].
 
 # Contents
 
@@ -10,11 +10,11 @@ We value contributions and feedback and want you to contribute effectively. To m
 
 - [ ] Terms and conditions
 >[!TIP]
-> For example Canada includes the following:
+> For example, Canada includes the following:
 > _[Terms and conditions](https://www.justice.gc.ca/eng/terms-avis/index.html#usa)_.
 - [ ] Disclaimer
 >[!TIP]
-> For example illumina includes the following disclaimer:
+> For example, Illumina includes the following disclaimer:
 > _For Research Use Only, Not for use in diagnostic procedures (except as specifically noted)_.
 
 ## Templates
@@ -22,7 +22,7 @@ We value contributions and feedback and want you to contribute effectively. To m
 ### Footer
 Definition of elements inside the footer.
 
-> [!NOTE] _What elements are mandatory and optional to us?_
+> [!NOTE] _What elements are mandatory and optional for us?_
 >
 > The **meta information** is mandatory.
 
@@ -86,7 +86,7 @@ Images
 - Image Logo
 
 ### Authentication Components
-Definition of elements inside the Auth.
+Definition of elements inside the authentication components.
 Login / Sign In
 : Usually positioned in the top right header.
 
@@ -118,23 +118,23 @@ For the header we can organize the elements in the following way:
 ```
 Account creation and login experience
 :
-For the oauth page we can mimic a technology product. 
+For the OAuth page, we can mimic a technology product. 
 Integrate https://cilogon.org/example/ in the flow.
 
-After Click in Log in:
+After clicking Log in:
 ```
 <section> // inside main
   {{Header and welcoming message}}
   <form>
     {{ Enter your email }}
-    {{ Sign up or sing in submit button }}
+    {{ Sign up or sign in submit button }}
   </form>
   {{ List of sign up or sign in options  }} // passkey, Google, ...
   {{ By proceeding, you agree to the Terms of Service and Privacy Notice }}
 </section>
 ```
 
-After submit the form
+After submitting the form
 :
 ```
 <section> // inside main
@@ -150,11 +150,11 @@ After submit the form
 </section>
 ```
 
-If is a new user we confirm the email.
+If it is a new user, we confirm the email.
 
 
 ### Error pages
-The error page will have a indirect error cause message followed by the http status code.
+The error page will have an indirect error cause message followed by the HTTP status code.
 ```
 <main>
 {{ Header with the Response status text group }} //  Page not found 
@@ -173,7 +173,7 @@ What went wrong?
 
 ## Landmarks (Organisms)
 ### User profile/account controls
-After login the header shows the user menu instead of the log in.
+After logging in, the header shows the user menu instead of the login.
 ```
 <accordion> // Hamburger button with two elements "My settings" and "Sign out"
 {{  My settings  }}
@@ -185,7 +185,7 @@ The settings page will have 2 sections: User Profile and security. And, the dele
 
 
 ### Menu options
-At the moment one element to change the language.
+At the moment, there is one element to change the language.
 
 ## Regions (Molecules)
 - Contextual header and links
