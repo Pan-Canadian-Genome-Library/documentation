@@ -6,6 +6,19 @@ We value contributions and feedback and want you to contribute effectively. To m
 
 # Contents
 
+- [Pages 📑](#pages-)
+- [Templates](#templates)
+  - [Footer](#footer)
+  - [Header structure](#header-structure)
+  - [Error pages](#error-pages)
+- [Landmarks (Organisms)](#landmarks-organisms)
+  - [User profile/account controls](#user-profileaccount-controls)
+  - [Menu options](#menu-options)
+- [Regions (Molecules)](#regions-molecules)
+  - [Authentication Components](#authentication-components)
+- [Components (Atoms)](#components-atoms)
+- [References](#references)
+
 ## Pages 📑 
 
 - [ ] Terms and conditions
@@ -85,43 +98,68 @@ Navigation links
 Images
 - Image Logo
 
-### Authentication Components
-Definition of elements inside the authentication components.
-Login / Sign In
-: Usually positioned in the top right header.
-
-Register / Create Account
-: For new users.
-
-Forgot Password / Account Recovery
-: A critical flow for users who lose access.
-
-Multi-Factor Authentication (MFA)
-: Secondary verification prompts (e.g., SMS, Authenticator apps).
-
-Session Timeout Warning
-: A modal or banner that warns users before they are automatically logged out.
-
-My Profile / Account Settings
-: The authenticated state that replaces the "Login" button.
-Sign Out / Log Out.
 
 ### Header structure
 For the header we can organize the elements in the following way:
 ```
 <header>
+{{ Menu options. }}
 {{ Image Logo link to home. }}
 {{ Search bar. }}
-{{ Menu options. }}
 {{ Authentication components. }}
 </header>
 ```
-Account creation and login experience
-:
-For the OAuth page, we can mimic a technology product. 
-Integrate https://cilogon.org/example/ in the flow.
 
-After clicking Log in:
+Visual representation
+
+```mermaid
+---
+config:
+  treemap:
+    showValues: false
+---
+
+treemap-beta
+"Header"
+    "Menu": 20
+    "Link"
+        "Image Logo": 20
+    "Search Bar": 20
+    "Authentication"
+        "Menu": 20
+
+```
+
+Login experience
+:
+The user experience is provided by CILogon, example:
+
+```mermaid
+
+sequenceDiagram
+    autonumber
+    actor User
+    participant RA as Research App
+    participant CP as CILogon Proxy
+    participant IdP as Campus IdP
+    participant CO as COmanage / JWT
+
+    User->>RA: Attempts to access app
+    RA->>CP: Redirect to Proxy
+    CP->>User: Prompt for Institution Discovery
+    User->>CP: Selects Campus
+    CP->>IdP: Select & Redirect
+    IdP->>User: Prompt for Credentials
+    User->>IdP: Authenticates
+    IdP->>CO: SAML Assertion (AuthnResponse)
+    Note over CP,CO: CILogon and COmanage process claims/groups
+    CO->>RA: Issue Token (JWT)
+    RA->>User: Grant Access
+```
+
+After attempting to access the app, the user will be redirected to their institution. We cannot know exactly what the institution's login components look like, but they might be similar to the following example.
+:
+
 ```
 <section> // inside main
   {{Header and welcoming message}}
@@ -129,7 +167,7 @@ After clicking Log in:
     {{ Enter your email }}
     {{ Sign up or sign in submit button }}
   </form>
-  {{ List of sign up or sign in options  }} // passkey, Google, ...
+  {{ List of sign up or sign in options  }} // passkey, Google, Institution...
   {{ By proceeding, you agree to the Terms of Service and Privacy Notice }}
 </section>
 ```
@@ -146,11 +184,11 @@ After submitting the form
   </form>
   {{ By proceeding, you agree to the Terms of Service and Privacy Notice }}
   {{ Use a different account link }}
-  {{ Forgot password link  }} // only visible if user exist
+  {{ Forgot password link  }} // only visible if user exists
 </section>
 ```
 
-If it is a new user, we confirm the email.
+If it is a new user, we confirm their email address.
 
 
 ### Error pages
@@ -191,6 +229,34 @@ At the moment, there is one element to change the language.
 - Contextual header and links
 - Secondary header and navigation items
 - API Tokens list
+### Authentication Components
+Definition of elements inside the authentication components.
+
+
+> [!NOTE] _What elements are mandatory and optional for us?_
+>
+> The **CILogon Identity Provider Button** is mandatory.
+
+
+Login / Sign In / Sign Out / Log Out.
+: The login experience is provided by the CILogon Identity Provider. For example, see https://cilogon.org/example/
+:
+<form action="#" method="post" style="display: flex; max-height:40px; background: #4B794B; max-width:90px">
+<img src="https://genomelibrary.ca/wp-content/uploads/2024/11/logo-white.svg" alt="" role="presentation">
+<input type="image" name="cisubmit2" id="cisubmit2"
+src="https://cilogon.org/images/cilogon-ci-32-g.png"
+alt="CILogon Service"
+title="Click to use the CILogon Service."
+style="cursor:help;" />
+</form> 
+
+
+>[!TIP] CILogon has several [customization options][cilogon-config] which change the behavior and/or content of the CILogon website.
+
+My Profile / Account Settings
+: The authenticated state that replaces the "Login" button.
+The authentication settings are managed by the identity provider organization, for example:
+
  
 ## Components (Atoms)
 - Headers
@@ -201,3 +267,6 @@ At the moment, there is one element to change the language.
 ## References
 
 [contrib]: patterns/docs/CONTRIBUTING.md.
+[cilogon-device]: https://www.cilogon.org/device
+[cilogon-skin]: https://www.cilogon.org/skins#h.52ndu647pi2y
+[cilogon-config]: https://cilogon.org/skin/config-example.xml
