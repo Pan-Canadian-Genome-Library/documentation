@@ -10,9 +10,6 @@
     },
     "logo": {
       "$ref": "/patterns/atoms_components/avatar.schema.json"
-    },
-    "variant": {
-      "type": "string"
     }
   }
 }

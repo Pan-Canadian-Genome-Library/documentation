@@ -4,9 +4,15 @@ _Under construction_ 🏗️
 
 We value contributions and feedback and want you to contribute effectively. To make your contribution experience as smooth as possible, [please reach out to us first][contrib].
 
+### How to read this guide
+Throughout this document, you will see HTML structures containing tokens like `{{ my_design_token }}`. This logicless syntax represents dynamic data.
+- **For Designers:** These tokens represent the elements or text nodes that need to be accounted for in your designs.
+- **For Developers:** Every token maps directly to a property in a corresponding `*.schema.json` file. These schemas dictate the strict data contract your React components must accept as props.
+
+
 # Contents
 
-- [Pages 📑](#pages-)
+- [Pages](#pages)
 - [Templates](#templates)
   - [Footer](#footer)
   - [Header structure](#header-structure)
@@ -19,7 +25,7 @@ We value contributions and feedback and want you to contribute effectively. To m
 - [Components (Atoms)](#components-atoms)
 - [References](#references)
 
-## Pages 📑 
+## Pages
 
 - [ ] Terms and conditions
 >[!TIP]
@@ -50,18 +56,27 @@ For the elements inside a footer, let's combine what we know with the resources 
 
 
 Example:
-```
+```html
 <footer>
-{{ contextual header }}
-{{ contextual links }}
-{{ images }}
-{{ Secondary navigation }} // links out of your service
-{{ Your services links }} // links to your services: ‘Privacy’, ‘Accessibility’, ‘Cookies’ and ‘Terms and conditions’ for the link text.
-{{ meta information }}
+  {{ contextual_header }}
+  {{ contextual_links }}
+  {{ images }}
+  {{ secondary_navigation }}
+  {{ services_links }}
+  {{ meta_information }}
 </footer>
 ```
 
-Visual representation
+| Design Token | Schema (Property) | Description |
+| --- | --- | --- |
+| `{{ contextual_header }}` | [`navigation.schema.json#/properties/renderTitle`][navigation-schema] | The title of the contextual area. |
+| `{{ contextual_links }}` | [`navigation.schema.json#/properties/renderLinks`][navigation-schema] | Links providing context to the current page. |
+| `{{ images }}` | [`avatar.schema.json`][avatar-schema] | Logos or visual elements displayed in the footer. |
+| `{{ secondary_navigation }}` | [`navigation.schema.json`][navigation-schema] | Links leading out of the service or to secondary areas. |
+| `{{ services_links }}` | [`navigation.schema.json`][navigation-schema] | Core service links like Privacy, Accessibility, Cookies, etc. |
+| `{{ meta_information }}` | [`footer-meta-item.schema.json`][footer-meta-schema] | Mandatory copyright or meta details. |
+
+**Visual representation**
 
 ```mermaid
 ---
@@ -83,32 +98,47 @@ treemap-beta
 
 ```
 
-Specific to our case
-Contact and support links
+**Specific to our case**
+
+**_Contact and support links_**
 - Help, questions and comments
 - Privacy policy
 - Accessibility statement
 - Terms and conditions
 
-Navigation links
+**_Navigation links_**
 - Languages
 - License
 - Copyright
 
-Images
+**_Images_**
 - Image Logo
+
+**_Services_**
+- Administration & Identity
+- Data Submission System
+- Research Portal
+- Participant Portal
+- SD4H Infrastructure
 
 
 ### Header structure
 For the header we can organize the elements in the following way:
-```
+```html
 <header>
-{{ Menu options. }}
-{{ Image Logo link to home. }}
-{{ Search bar. }}
-{{ Authentication components. }}
+  {{ menu_options }}
+  {{ image_logo }}
+  {{ search_bar }}
+  {{ authentication_components }}
 </header>
 ```
+
+| Template Token | Schema Property | Description |
+| --- | --- | --- |
+| `{{ menu_options }}` | [`todo.schema.json#/properties/menuOptions`](./schemas/header.schema.json) | List of navigation items for the main menu. |
+| `{{ image_logo }}` | [`link.schema.json`][link-schema] | URL, alt text, and link for the portal's logo. |
+| `{{ search_bar }}` | [`todo.schema.json#/properties/searchBar`](./schemas/header.schema.json) | Configuration for the search input component. |
+| `{{ authentication_components }}` | [Authentication Components](#authentication-components) | User profile, login, or settings controls. |
 
 Visual representation
 
@@ -129,10 +159,12 @@ treemap-beta
         "Menu": 20
 
 ```
-
-Login experience
+### Login
+**Login experience**
 :
-The user experience is provided by CILogon, example:
+The user experience is provided by CILogon. For example:
+> [!CAUTION]
+> For the real specs visit the IAM documentation. 
 
 ```mermaid
 
@@ -187,9 +219,7 @@ After submitting the form
   {{ Forgot password link  }} // only visible if user exists
 </section>
 ```
-
-If it is a new user, we confirm their email address.
-
+You should be forwarder to the PCGL app.
 
 ### Error pages
 The error page will have an indirect error cause message followed by the HTTP status code.
@@ -201,7 +231,7 @@ The error page will have an indirect error cause message followed by the HTTP st
 {{ Report and feedback form}} // Is this page useful? Yes No [Report a problem Form ]
 </main>
 ```
-the form could be something like:
+The form could be something like:
 ```
 Help us improve [Name of service]
 Do not include personal or financial information like your National Insurance number or credit card details.
@@ -219,7 +249,14 @@ After logging in, the header shows the user menu instead of the login.
 </accordion>
 ```
 
-The settings page will have 2 sections: User Profile and security. And, the delete account link.
+
+<details>
+<summary><b>🚧 Account settings (Work in Progress)</b></summary>
+
+The settings page will have two sections: User Profile and Security, as well as a link to delete the account.
+What information is available ? `voPerson` ?
+</details>
+
 
 
 ### Menu options
@@ -259,14 +296,41 @@ The authentication settings are managed by the identity provider organization, f
 
  
 ## Components (Atoms)
-- Headers
 - Text
-- Link
+- [Link][link-schema]
 - Button
 
 ## References
 
-[contrib]: patterns/docs/CONTRIBUTING.md.
+### Design Guidelines
+- [Nielsen Norman Group: Footers](https://www.nngroup.com/articles/footers/)
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+
+### Authentication (CILogon)
+- [CILogon Device Setup][cilogon-device]
+- [CILogon Skin Customization][cilogon-skin]
+- [CILogon Configuration Example][cilogon-config]
+
+### Internal Documentation
+- [Contribution Guidelines][contrib]
+- [Footer components][footer-data]
+- [Footer schema][footer-schema]
+- [Footer meta item schema][footer-meta-schema]
+- [Navigation schema][navigation-schema]
+- [Link schema][link-schema]
+- [Avatar schema][avatar-schema]
+
+
+
+[contrib]: patterns/docs/CONTRIBUTING.md
 [cilogon-device]: https://www.cilogon.org/device
 [cilogon-skin]: https://www.cilogon.org/skins#h.52ndu647pi2y
 [cilogon-config]: https://cilogon.org/skin/config-example.xml
+[footer-data]: ./pages/footer-data.json
+[footer-schema]: ./organisms_landmarks/footer.schema.json
+[footer-meta-schema]: ./molecules_regions/footer-meta-item.schema.json
+[navigation-schema]: ./atoms_components/navigation.schema.json
+[link-schema]: ./atoms_components/link.schema.json
+[avatar-schema]: ./atoms_components/avatar.schema.json
+[menu_options]: ./#
+[search_bar]: ./#
