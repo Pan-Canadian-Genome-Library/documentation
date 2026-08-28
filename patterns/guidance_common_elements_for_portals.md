@@ -1,4 +1,4 @@
-_Under construction_ 🏗️
+
 
 # Guide for common elements across portals.
 
@@ -9,16 +9,27 @@ Throughout this document, you will see HTML structures containing tokens like `{
 - **For Designers:** These tokens represent the elements or text nodes that need to be accounted for in your designs.
 - **For Developers:** Every token maps directly to a property in a corresponding `*.schema.json` file. These schemas dictate the strict data contract your React components must accept as props.
 
+> [!WARNING] 
+> **_Under construction labels_**
+>
+> Consider slowing down in the sections that contain the _Under construction_ symbols: 🚧 🏗️ 👷🏾‍♀️ 🦺 ⚠️
+> This document will point out the work in progress using construction symbols.
+
+At the moment, we face some challenges trying to standardize the design token language. The aim is to follow a standard so any app will be competent enough to translate the design tokens into code or visualizations. We have chosen JSON given its versatility in representing data.
+ - [ ] [Modular schemas ⚠️ 🏗️](https://json-schema.org/understanding-json-schema/structuring) If in the future we have a CMS.
+
 
 # Contents
 
 - [Pages](#pages)
 - [Templates](#templates)
-  - [Footer](#footer)
-  - [Header structure](#header-structure)
+  - [Footer](#footer-template)
+  - [Header structure](#header-template)
   - [Error pages](#error-pages)
 - [Landmarks (Organisms)](#landmarks-organisms)
-  - [User profile/account controls](#user-profileaccount-controls)
+  - [Header](#header)
+  - [Footer](#footer)
+  - [User profile/account controls](#account-settings)
   - [Menu options](#menu-options)
 - [Regions (Molecules)](#regions-molecules)
   - [Authentication Components](#authentication-components)
@@ -27,54 +38,24 @@ Throughout this document, you will see HTML structures containing tokens like `{
 
 ## Pages
 
-- [ ] Terms and conditions
+- [ ] ⚠️ 🏗️ Terms and conditions
 >[!TIP]
 > For example, Canada includes the following:
 > _[Terms and conditions](https://www.justice.gc.ca/eng/terms-avis/index.html#usa)_.
-- [ ] Disclaimer
+- [ ] ⚠️ 🏗️ Disclaimer
 >[!TIP]
 > For example, Illumina includes the following disclaimer:
 > _For Research Use Only, Not for use in diagnostic procedures (except as specifically noted)_.
+- [ ] ⚠️ 🏗️ Header
+- [ ] ⚠️ 🏗️ Footer
+- [ ] ⚠️ 🏗️ User settings
+- [ ] ⚠️ 🏗️ Menu
+
 
 ## Templates
 
-### Footer
-Definition of elements inside the footer.
-
-> [!NOTE] _What elements are mandatory and optional for us?_
->
-> The **meta information** is mandatory.
-
-
-For the elements inside a footer, let's combine what we know with the resources we want to mimic, like the UK Government. For this particular case, we used Nielsen Norman Group guidelines, which outline what a common user looks for in a footer.
-
- - Contextual header and links
- - Secondary header and navigation items
- - Links to our services
- - Terms and conditions
- - Image Logo
-
-
-Example:
-```html
-<footer>
-  {{ contextual_header }}
-  {{ contextual_links }}
-  {{ images }}
-  {{ secondary_navigation }}
-  {{ services_links }}
-  {{ meta_information }}
-</footer>
-```
-
-| Design Token | Schema (Property) | Description |
-| --- | --- | --- |
-| `{{ contextual_header }}` | [`navigation.schema.json#/properties/renderTitle`][navigation-schema] | The title of the contextual area. |
-| `{{ contextual_links }}` | [`navigation.schema.json#/properties/renderLinks`][navigation-schema] | Links providing context to the current page. |
-| `{{ images }}` | [`avatar.schema.json`][avatar-schema] | Logos or visual elements displayed in the footer. |
-| `{{ secondary_navigation }}` | [`navigation.schema.json`][navigation-schema] | Links leading out of the service or to secondary areas. |
-| `{{ services_links }}` | [`navigation.schema.json`][navigation-schema] | Core service links like Privacy, Accessibility, Cookies, etc. |
-| `{{ meta_information }}` | [`footer-meta-item.schema.json`][footer-meta-schema] | Mandatory copyright or meta details. |
+### Footer Template
+[🔗 definition](#footer) 
 
 **Visual representation**
 
@@ -122,25 +103,10 @@ treemap-beta
 - SD4H Infrastructure
 
 
-### Header structure
-For the header we can organize the elements in the following way:
-```html
-<header>
-  {{ menu_options }}
-  {{ image_logo }}
-  {{ search_bar }}
-  {{ authentication_components }}
-</header>
-```
+### Header Template
+[🔗 definition](#header) 
 
-| Template Token | Schema Property | Description |
-| --- | --- | --- |
-| `{{ menu_options }}` | [`todo.schema.json#/properties/menuOptions`](./schemas/header.schema.json) | List of navigation items for the main menu. |
-| `{{ image_logo }}` | [`link.schema.json`][link-schema] | URL, alt text, and link for the portal's logo. |
-| `{{ search_bar }}` | [`todo.schema.json#/properties/searchBar`](./schemas/header.schema.json) | Configuration for the search input component. |
-| `{{ authentication_components }}` | [Authentication Components](#authentication-components) | User profile, login, or settings controls. |
-
-Visual representation
+**Visual representation**
 
 ```mermaid
 ---
@@ -156,6 +122,7 @@ treemap-beta
         "Image Logo": 20
     "Search Bar": 20
     "Authentication"
+        "CILogon Button": 80
         "Menu": 20
 
 ```
@@ -219,7 +186,7 @@ After submitting the form
   {{ Forgot password link  }} // only visible if user exists
 </section>
 ```
-You should be forwarder to the PCGL app.
+You should be forwarded to the PCGL app.
 
 ### Error pages
 The error page will have an indirect error cause message followed by the HTTP status code.
@@ -240,39 +207,121 @@ What went wrong?
 ```
 
 ## Landmarks (Organisms)
-### User profile/account controls
-After logging in, the header shows the user menu instead of the login.
-```
-<accordion> // Hamburger button with two elements "My settings" and "Sign out"
-{{  My settings  }}
-{{  Sign out  }}
-</accordion>
+
+### Header
+For the header we can organize the elements in the following way:
+```html
+<header>
+  {{ menu_options }}
+  {{ image_logo }}
+  {{ search_bar }}
+  {{ authentication_components }}
+</header>
 ```
 
+> [!NOTE] _What elements are mandatory and optional for us?_
+>
+> The [**authentication component**](#authentication-components) is a MUST.
+> The rest of the elements are optional.
 
+
+| Template Token | Schema Property | Description |
+| --- | --- | --- |
+| `{{ menu }}` | [`header.schema.json#/properties/render_menu`][header-schema] | List of navigation items for the main menu. |
+| `{{ image_logo }}` | [`link.schema.json`][link-schema] | URL, alt text, and link for the portal's logo. |
+| `{{ search_bar }}` | [`header.schema.json#/properties/render_search_bar`][header-schema] | Configuration for the search input component. |
+| `{{ authentication_components }}` | [Authentication Components](#authentication-components) | Mandatory User profile, login, or settings controls. |
+
+### Account Settings
 <details>
 <summary><b>🚧 Account settings (Work in Progress)</b></summary>
 
 The settings page will have two sections: User Profile and Security, as well as a link to delete the account.
 What information is available ? `voPerson` ?
+This might not be relevant because the user technically will not have an account.
 </details>
 
+For the Account settings we can organize the elements in the following way:
+```html
+<main>
+  <section>
+    {{ user_profile }}
+  </section>
+  <section>
+    {{ security }}
+  </section>
+  <section>
+    {{ API_tokens }}
+  </section>
+  {{ delete_account }}
+</main>
+```
 
+### Footer
+Definition of elements inside the footer.
+
+> [!NOTE] _What elements are mandatory and optional for us?_
+>
+> The **meta information** is a MUST.
+> The rest of the elements are optional.
+
+For the elements inside a footer, let's combine what we know with the resources we want to mimic, like the UK Government. For this particular case, we used Nielsen Norman Group guidelines, which outline what a common user looks for in a footer.
+
+ - Contextual header and links
+ - Secondary header and navigation items
+ - Links to our services
+ - Terms and conditions
+ - Image Logo
+
+
+Example:
+```html
+<footer>
+  {{ contextual_header }}
+  {{ contextual_links }}
+  {{ images }}
+  {{ secondary_navigation }}
+  {{ services_links }}
+  {{ meta_information }}
+</footer>
+```
+
+| Design Token | Schema (Property) | Description |
+| --- | --- | --- |
+| `{{ contextual_header }}` | [`navigation.schema.json#/properties/renderTitle`][navigation-schema] | The title of the contextual area. |
+| `{{ contextual_links }}` | [`navigation.schema.json#/properties/renderLinks`][navigation-schema] | Links providing context to the current page. |
+| `{{ images }}` | [`avatar.schema.json`][avatar-schema] | Logos or visual elements displayed in the footer. |
+| `{{ secondary_navigation }}` | [`navigation.schema.json`][navigation-schema] | Links leading out of the service or to secondary areas. |
+| `{{ services_links }}` | [`navigation.schema.json`][navigation-schema] | Core service links like Privacy, Accessibility, Cookies, etc. |
+| `{{ meta_information }}` | [`footer-meta-item.schema.json`][footer-meta-schema] | Mandatory copyright or meta details. |
+
+
+## Regions (Molecules)
+- [ ] 🚧 Contextual header and links
+- [ ] 🚧 Secondary header and navigation items
+- [ ] 🚧 API Tokens list
 
 ### Menu options
 At the moment, there is one element to change the language.
 
-## Regions (Molecules)
-- Contextual header and links
-- Secondary header and navigation items
-- API Tokens list
 ### Authentication Components
+**User profile/account controls**
+Before logging in, we must show the **CILogon Identity Provider Button** in the header.
+After logging in, the header shows the user menu instead of the **CILogon Identity Provider Button**.
+```
+<details> // Hamburger button with two elements "My settings" and "Sign out"
+<summary>{{ user name }}</summary>
+{{  My Settings  }}
+{{  Log Out  }}
+</details>
+```
+
 Definition of elements inside the authentication components.
 
 
 > [!NOTE] _What elements are mandatory and optional for us?_
 >
-> The **CILogon Identity Provider Button** is mandatory.
+> The **CILogon Identity Provider Button** is a MUST.
 
 
 Login / Sign In / Sign Out / Log Out.
@@ -290,9 +339,9 @@ style="cursor:help;" />
 
 >[!TIP] CILogon has several [customization options][cilogon-config] which change the behavior and/or content of the CILogon website.
 
-My Profile / Account Settings
-: The authenticated state that replaces the "Login" button.
-The authentication settings are managed by the identity provider organization, for example:
+### My Profile / Account Settings
+The authentication settings are managed by the identity provider organization.
+
 
  
 ## Components (Atoms)
@@ -332,5 +381,6 @@ The authentication settings are managed by the identity provider organization, f
 [navigation-schema]: ./atoms_components/navigation.schema.json
 [link-schema]: ./atoms_components/link.schema.json
 [avatar-schema]: ./atoms_components/avatar.schema.json
+[header-schema]: ./organisms_landmarks/header.schema.json
 [menu_options]: ./#
 [search_bar]: ./#

@@ -1,9 +1,9 @@
 {
-  "$id": "/patterns/molecules_regions/footer.schema",
+  "$id": "organisms_landmarks/footer.schema",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Footer Meta Item",
+  "title": "Footer",
   "type": "object",
-  "required": ["navigation", "meta"],
+  "required": ["meta"],
   "properties": {
     "meta": {
       "$ref": "/patterns/molecules_regions/footer-meta-item.schema.json"

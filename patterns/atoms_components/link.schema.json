@@ -1,5 +1,5 @@
 {
-  "$id": "/patterns/atoms_components/link.schema",
+  "$id": "atoms_components/link.schema",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Link",
   "type": "object",

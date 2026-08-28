@@ -11,10 +11,10 @@ This is a mix of concepts between [atomic design][atomic-design-brad-frost] and 
 
 
 Pages
-: Final user interface that fuses the template and the content.
+: The data inserted in the designs. Final user interface that fuses the template and the content.
 
 Templates
-: Templates consist of elements and groups of elements without data.
+: Designs without data. Templates consist of elements and groups of elements without data.
 
 Landmarks (Organisms)
 : Complex user interfaces; these are subsections of a page that we want the user to be able to navigate directly to.
