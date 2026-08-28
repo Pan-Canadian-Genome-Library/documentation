@@ -219,8 +219,9 @@ For the header we can organize the elements in the following way:
 </header>
 ```
 
-> [!NOTE] _What elements are mandatory and optional for us?_
->
+> [!NOTE]
+> _What elements are mandatory and optional for us?_
+> 
 > The [**authentication component**](#authentication-components) is a MUST.
 > The rest of the elements are optional.
 
@@ -260,7 +261,8 @@ For the Account settings we can organize the elements in the following way:
 ### Footer
 Definition of elements inside the footer.
 
-> [!NOTE] _What elements are mandatory and optional for us?_
+> [!NOTE]
+> _What elements are mandatory and optional for us?_
 >
 > The **meta information** is a MUST.
 > The rest of the elements are optional.
@@ -319,25 +321,28 @@ After logging in, the header shows the user menu instead of the **CILogon Identi
 Definition of elements inside the authentication components.
 
 
-> [!NOTE] _What elements are mandatory and optional for us?_
+> [!NOTE]
+> _What elements are mandatory and optional for us?_
 >
 > The **CILogon Identity Provider Button** is a MUST.
 
 
-Login / Sign In / Sign Out / Log Out.
-: The login experience is provided by the CILogon Identity Provider. For example, see https://cilogon.org/example/
-:
-<form action="#" method="post" style="display: flex; max-height:40px; background: #4B794B; max-width:90px">
+**Login / Sign In / Sign Out / Log Out.**
+
+The login experience is provided by the CILogon Identity Provider. For example, see https://cilogon.org/example/
+
+<div action="#" method="post" style="display: flex; max-height:40px; background: #4B794B; max-width:90px">
 <img src="https://genomelibrary.ca/wp-content/uploads/2024/11/logo-white.svg" alt="" role="presentation">
 <input type="image" name="cisubmit2" id="cisubmit2"
 src="https://cilogon.org/images/cilogon-ci-32-g.png"
 alt="CILogon Service"
 title="Click to use the CILogon Service."
 style="cursor:help;" />
-</form> 
+</div> 
 
 
->[!TIP] CILogon has several [customization options][cilogon-config] which change the behavior and/or content of the CILogon website.
+> [!TIP]
+> CILogon has several [customization options][cilogon-config] which change the behavior and/or content of the CILogon website.
 
 ### My Profile / Account Settings
 The authentication settings are managed by the identity provider organization.
