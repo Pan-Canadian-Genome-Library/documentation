@@ -1,3 +1,3 @@
 # Footer template
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="400" height="225" src="https://embed.figma.com/design/x9uA02XOaDzi6QGGNxpuWJ/Ant-Design-System-for-Figma--Free-version---Community-?node-id=1000-4301&embed-host=share" allowfullscreen></iframe>
+[![Footer in Figma](https://figmage.com/images/OGsh5fysd9u2_Sit8EY5m.png)](https://www.figma.com/design/x9uA02XOaDzi6QGGNxpuWJ/Ant-Design-System-for-Figma--Free-version---Community-?node-id=1143-178&t=q0WjkNykSAe0izih-1)

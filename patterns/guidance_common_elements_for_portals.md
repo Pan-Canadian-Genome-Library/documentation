@@ -126,6 +126,9 @@ treemap-beta
         "Menu": 20
 
 ```
+
+----------------------------------------------
+
 ### Login
 **Login experience**
 :
@@ -188,6 +191,8 @@ After submitting the form
 ```
 You should be forwarded to the PCGL app.
 
+----------------------------------------------
+
 ### Error pages
 The error page will have an indirect error cause message followed by the HTTP status code.
 ```
@@ -205,6 +210,9 @@ Do not include personal or financial information like your National Insurance nu
 What were you doing?
 What went wrong?
 ```
+
+----------------------------------------------
+
 
 ## Landmarks (Organisms)
 
@@ -233,6 +241,8 @@ For the header we can organize the elements in the following way:
 | `{{ search_bar }}` | [`header.schema.json#/properties/render_search_bar`][header-schema] | Configuration for the search input component. |
 | `{{ authentication_components }}` | [Authentication Components](#authentication-components) | Mandatory User profile, login, or settings controls. |
 
+----------------------------------------------
+
 ### Account Settings
 <details>
 <summary><b>🚧 Account settings (Work in Progress)</b></summary>
@@ -257,6 +267,8 @@ For the Account settings we can organize the elements in the following way:
   {{ delete_account }}
 </main>
 ```
+
+----------------------------------------------
 
 ### Footer
 Definition of elements inside the footer.
@@ -297,6 +309,7 @@ Example:
 | `{{ services_links }}` | [`navigation.schema.json`][navigation-schema] | Core service links like Privacy, Accessibility, Cookies, etc. |
 | `{{ meta_information }}` | [`footer-meta-item.schema.json`][footer-meta-schema] | Mandatory copyright or meta details. |
 
+----------------------------------------------
 
 ## Regions (Molecules)
 - [ ] 🚧 Contextual header and links
@@ -305,6 +318,8 @@ Example:
 
 ### Menu options
 At the moment, there is one element to change the language.
+
+----------------------------------------------
 
 ### Authentication Components
 **User profile/account controls**
@@ -331,18 +346,11 @@ Definition of elements inside the authentication components.
 
 The login experience is provided by the CILogon Identity Provider. For example, see https://cilogon.org/example/
 
-<div action="#" method="post" style="display: flex; max-height:40px; background: #4B794B; max-width:90px">
-<img src="https://genomelibrary.ca/wp-content/uploads/2024/11/logo-white.svg" alt="" role="presentation">
-<input type="image" name="cisubmit2" id="cisubmit2"
-src="https://cilogon.org/images/cilogon-ci-32-g.png"
-alt="CILogon Service"
-title="Click to use the CILogon Service."
-style="cursor:help;" />
-</div> 
-
 
 > [!TIP]
 > CILogon has several [customization options][cilogon-config] which change the behavior and/or content of the CILogon website.
+
+----------------------------------------------
 
 ### My Profile / Account Settings
 The authentication settings are managed by the identity provider organization.
@@ -357,8 +365,9 @@ The authentication settings are managed by the identity provider organization.
 ## References
 
 ### Design Guidelines
-- [Nielsen Norman Group: Footers](https://www.nngroup.com/articles/footers/)
+- [GC Design System](https://design-system.canada.ca/)
 - [GOV.UK Design System](https://design-system.service.gov.uk/)
+- [Nielsen Norman Group: Footers](https://www.nngroup.com/articles/footers/)
 
 ### Authentication (CILogon)
 - [CILogon Device Setup][cilogon-device]
