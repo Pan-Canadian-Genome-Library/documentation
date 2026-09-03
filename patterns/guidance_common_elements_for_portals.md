@@ -1,8 +1,8 @@
 
 
-# Guide for common elements across portals.
+# Guide for Common Elements Across Portals	
 
-We value contributions and feedback and want you to contribute effectively. To make your contribution experience as smooth as possible, [please reach out to us first][contrib].
+We value contributions and feedback and want you to contribute effectively. To make your experience as smooth as possible, [please reach out to us first][contrib].
 
 ### How to read this guide
 Throughout this document, you will see HTML structures containing tokens like `{{ my_design_token }}`. This logicless syntax represents dynamic data.
@@ -12,11 +12,11 @@ Throughout this document, you will see HTML structures containing tokens like `{
 > [!WARNING] 
 > **_Under construction labels_**
 >
-> Consider slowing down in the sections that contain the _Under construction_ symbols: 🚧 🏗️ 👷🏾‍♀️ 🦺 ⚠️
+> Please note the sections containing the sections that contain the _Under construction_ symbols: 🚧 🏗️ 👷🏾‍♀️ 🦺 ⚠️
 > This document will point out the work in progress using construction symbols.
 
-At the moment, we face some challenges trying to standardize the design token language. The aim is to follow a standard so any app will be competent enough to translate the design tokens into code or visualizations. We have chosen JSON given its versatility in representing data.
- - [ ] [Modular schemas ⚠️ 🏗️](https://json-schema.org/understanding-json-schema/structuring) If in the future we have a CMS.
+At the moment, we face some challenges trying to standardize the design token language. The aim is to follow a standard so any application is capable of translating the design tokens into code or visualizations. We have chosen JSON given its versatility in representing data.
+ - [ ] [Modular schemas ⚠️ 🏗️](https://json-schema.org/understanding-json-schema/structuring): To be considered if a CMS is introduced in the future..
 
 
 # Contents
@@ -39,11 +39,11 @@ At the moment, we face some challenges trying to standardize the design token la
 ## Pages
 
 - [ ] ⚠️ 🏗️ Terms and conditions
->[!TIP]
+> [!TIP]
 > For example, Canada includes the following:
 > _[Terms and conditions](https://www.justice.gc.ca/eng/terms-avis/index.html#usa)_.
 - [ ] ⚠️ 🏗️ Disclaimer
->[!TIP]
+> [!TIP]
 > For example, Illumina includes the following disclaimer:
 > _For Research Use Only, Not for use in diagnostic procedures (except as specifically noted)_.
 - [ ] ⚠️ 🏗️ Header
@@ -131,10 +131,10 @@ treemap-beta
 
 ### Login
 **Login experience**
-:
+
 The user experience is provided by CILogon. For example:
 > [!CAUTION]
-> For the real specs visit the IAM documentation. 
+> For the actual specifications, visit the IAM documentation. 
 
 ```mermaid
 
@@ -160,7 +160,7 @@ sequenceDiagram
 ```
 
 After attempting to access the app, the user will be redirected to their institution. We cannot know exactly what the institution's login components look like, but they might be similar to the following example.
-:
+
 
 ```
 <section> // inside main
@@ -174,14 +174,14 @@ After attempting to access the app, the user will be redirected to their institu
 </section>
 ```
 
-After submitting the form
-:
+**After submitting the form**
+
 ```
 <section> // inside main
   {{Header and welcoming message}}
   <form>
-    {{ your email }} // hidden field no editable
-    {{ your pass }} // hidden field if required
+    {{ your email }} // non-editable hidden field
+    {{ your password }} // hidden field if required	
     {{ Sign in submit button }}
   </form>
   {{ By proceeding, you agree to the Terms of Service and Privacy Notice }}
@@ -189,12 +189,13 @@ After submitting the form
   {{ Forgot password link  }} // only visible if user exists
 </section>
 ```
-You should be forwarded to the PCGL app.
+**You should be forwarded to the PCGL app.**
 
 ----------------------------------------------
 
 ### Error pages
-The error page will have an indirect error cause message followed by the HTTP status code.
+
+The error page displays a user-friendly error message followed by the HTTP status code.	
 ```
 <main>
 {{ Header with the Response status text group }} //  Page not found 
@@ -206,7 +207,7 @@ The error page will have an indirect error cause message followed by the HTTP st
 The form could be something like:
 ```
 Help us improve [Name of service]
-Do not include personal or financial information like your National Insurance number or credit card details.
+Do not include personal or financial information like your Social Insurance Number or credit card details.
 What were you doing?
 What went wrong?
 ```
@@ -217,8 +218,11 @@ What went wrong?
 ## Landmarks (Organisms)
 
 ### Header
-For the header we can organize the elements in the following way:
+
+For the header, we can organize the elements as follows:
+
 ```html
+{{ accessibility_links }}
 <header>
   {{ menu_options }}
   {{ image_logo }}
@@ -231,6 +235,9 @@ For the header we can organize the elements in the following way:
 > _What elements are mandatory and optional for us?_
 > 
 > The [**authentication component**](#authentication-components) is a MUST.
+>
+> The **skip links component** is a MUST.
+>
 > The rest of the elements are optional.
 
 
@@ -239,7 +246,7 @@ For the header we can organize the elements in the following way:
 | `{{ menu }}` | [`header.schema.json#/properties/render_menu`][header-schema] | List of navigation items for the main menu. |
 | `{{ image_logo }}` | [`link.schema.json`][link-schema] | URL, alt text, and link for the portal's logo. |
 | `{{ search_bar }}` | [`header.schema.json#/properties/render_search_bar`][header-schema] | Configuration for the search input component. |
-| `{{ authentication_components }}` | [Authentication Components](#authentication-components) | Mandatory User profile, login, or settings controls. |
+| `{{ authentication_components }}` | [Authentication Components](#authentication-components) | Mandatory user profile, login, or settings controls. |
 
 ----------------------------------------------
 
@@ -248,11 +255,12 @@ For the header we can organize the elements in the following way:
 <summary><b>🚧 Account settings (Work in Progress)</b></summary>
 
 The settings page will have two sections: User Profile and Security, as well as a link to delete the account.
-What information is available ? `voPerson` ?
+What information is available?  `voPerson` ?
 This might not be relevant because the user technically will not have an account.
 </details>
 
-For the Account settings we can organize the elements in the following way:
+For the account settings, we can organize the elements as follows:
+
 ```html
 <main>
   <section>
@@ -317,7 +325,7 @@ Example:
 - [ ] 🚧 API Tokens list
 
 ### Menu options
-At the moment, there is one element to change the language.
+Currently, there is one element for toggling the language.
 
 ----------------------------------------------
 
@@ -333,7 +341,7 @@ After logging in, the header shows the user menu instead of the **CILogon Identi
 </details>
 ```
 
-Definition of elements inside the authentication components.
+Definition of authentication component elements.
 
 
 > [!NOTE]
@@ -348,7 +356,7 @@ The login experience is provided by the CILogon Identity Provider. For example, 
 
 
 > [!TIP]
-> CILogon has several [customization options][cilogon-config] which change the behavior and/or content of the CILogon website.
+> CILogon has several [customization options][cilogon-config] that change the behavior and/or content of the CILogon website.
 
 ----------------------------------------------
 
@@ -385,7 +393,7 @@ The authentication settings are managed by the identity provider organization.
 
 
 
-[contrib]: patterns/docs/CONTRIBUTING.md
+[contrib]: /patterns/docs/CONTRIBUTING.md
 [cilogon-device]: https://www.cilogon.org/device
 [cilogon-skin]: https://www.cilogon.org/skins#h.52ndu647pi2y
 [cilogon-config]: https://cilogon.org/skin/config-example.xml
