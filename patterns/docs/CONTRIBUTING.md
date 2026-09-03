@@ -1,46 +1,46 @@
 # Contributing
 
-## Check with our team
+## Check With Our Team
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change.
+When contributing to this repository, please first discuss the changes you wish to make via an issue, email, or any other method with the repository owners before starting work.
 
-## Review our design system
+## Review Our Guidelines
 
-This is a mix of concepts between [atomic design][atomic-design-brad-frost] and [HTML elements reference][element] for a more deliberate and hierarchical manner to represent the components across the portals. 
+These guidelines combine concepts from [Atomic Design][atomic-design-brad-frost] and the [MDN HTML elements reference][element] to provide a structured, hierarchical approach to representing components across portals.
 
 
 Pages
-: The data inserted in the designs. Final user interface that fuses the template and the content.
+: Specific instances where templates are populated with real data, representing the final user interface.
 
 Templates
-: Designs without data. Templates consist of elements and groups of elements without data.
+: Page-level layouts that arrange components and regions without specific content or data.
 
 Landmarks (Organisms)
-: Complex user interfaces; these are subsections of a page that we want the user to be able to navigate directly to.
+: Complex UI sections representing major areas of a page (e.g., header, footer) that users can navigate to directly.
 
 Regions (Molecules)
-: A group of elements that has a single responsibility.
+: A group of components combined to serve a single responsibility.
 
 Components (Atoms)
-: A non-divisible element that is part of the page.
+: An indivisible UI element (e.g., button, link, avatar) that serves as a fundamental building block.
 
-We based our decisions on well-known public organizations and their commitment to accessibility, so the list is not limited to: 
+Our decisions draw inspiration from established design systems, accessibility standards, and industry best practices, including but not limited to: 
  - [The Government of Canada][canada]
- - [The Government of UK][uk]
+ - [The UK Government][uk]
  - [Atomic Design by Brad Frost][atomic-design-brad-frost]
  - [MDN][MDN]
  - [Splunk][splunk]
 
-You may merge the Pull Request once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+## Pull Request Process
+
+You may merge a pull request once you have the sign-off of two other developers. If you do not have permission to merge, you may request the second reviewer to merge it on your behalf.
 
 ## Code of Conduct
 
 ### Our Pledge
 
 In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
+contributors and maintainers pledge to make participation in our project and
 our community a harassment-free experience for everyone, regardless of age, body
 size, disability, ethnicity, gender identity and expression, level of experience,
 nationality, personal appearance, race, religion, or sexual identity and
@@ -104,9 +104,9 @@ members of the project's leadership.
 
 ### Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage]
+This Code of Conduct is adapted from the [Contributor Covenant][homepage].
 
-[homepage]: http://contributor-covenant.org
+[homepage]: https://contributor-covenant.org
 
 [canada]: https://design-system.canada.ca
 
