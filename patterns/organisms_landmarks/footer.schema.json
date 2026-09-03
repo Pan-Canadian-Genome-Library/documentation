@@ -1,0 +1,16 @@
+{
+  "$id": "organisms_landmarks/footer.schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Footer",
+  "type": "object",
+  "required": ["meta"],
+  "properties": {
+    "meta": {
+      "$ref": "/patterns/molecules_regions/footer-meta-item.schema.json"
+    },
+    "navigation": {
+      "type": "array",
+      "items": { "$ref": "/patterns/atoms_components/navigation.schema.json" }
+    }
+  }
+}

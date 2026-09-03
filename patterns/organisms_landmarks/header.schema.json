@@ -1,0 +1,21 @@
+{
+  "$id": "organisms_landmarks/header",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Header",
+  "type": "object",
+  "required": ["render_auth"],
+  "properties": {
+    "render_auth": {
+      "type": "object"
+    },
+    "render_menu": {
+      "type": "object"
+    },
+    "image_logo": {
+      "$ref": "/patterns/atoms_components/link.schema.json"
+    },
+    "render_search_bar": {
+      "type": "object"
+    }
+  }
+}

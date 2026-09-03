@@ -1,0 +1,15 @@
+{
+  "$id": "molecules_regions/footer-meta-item.schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Footer Meta Item",
+  "type": "object",
+  "required": ["terms_conditions", "logo"],
+  "properties": {
+    "terms_conditions": {
+      "$ref": "/patterns/atoms_components/link.schema.json"
+    },
+    "logo": {
+      "$ref": "/patterns/atoms_components/avatar.schema.json"
+    }
+  }
+}
