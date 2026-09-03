@@ -1,6 +1,7 @@
 
+# Guide for Common Elements Across Portals
 
-# Guide for Common Elements Across Portals	
+[TL;DR: Figma Templates](/patterns/templates/figma.md)
 
 We value contributions and feedback and want you to contribute effectively. To make your experience as smooth as possible, [please reach out to us first][contrib].
 
@@ -12,11 +13,11 @@ Throughout this document, you will see HTML structures containing tokens like `{
 > [!WARNING] 
 > **_Under construction labels_**
 >
-> Please note the sections containing the sections that contain the _Under construction_ symbols: 🚧 🏗️ 👷🏾‍♀️ 🦺 ⚠️
+> Please note the sections marked with "under construction" symbols: 🚧 🏗️ 👷🏾‍♀️ 🦺 ⚠️
 > This document will point out the work in progress using construction symbols.
 
 At the moment, we face some challenges trying to standardize the design token language. The aim is to follow a standard so any application is capable of translating the design tokens into code or visualizations. We have chosen JSON given its versatility in representing data.
- - [ ] [Modular schemas ⚠️ 🏗️](https://json-schema.org/understanding-json-schema/structuring): To be considered if a CMS is introduced in the future..
+ - [ ] [Modular schemas ⚠️ 🏗️](https://json-schema.org/understanding-json-schema/structuring): To be considered if a CMS is introduced in the future.
 
 
 # Contents
@@ -181,7 +182,7 @@ After attempting to access the app, the user will be redirected to their institu
   {{Header and welcoming message}}
   <form>
     {{ your email }} // non-editable hidden field
-    {{ your password }} // hidden field if required	
+    {{ your password }} // hidden field if required
     {{ Sign in submit button }}
   </form>
   {{ By proceeding, you agree to the Terms of Service and Privacy Notice }}
@@ -189,13 +190,13 @@ After attempting to access the app, the user will be redirected to their institu
   {{ Forgot password link  }} // only visible if user exists
 </section>
 ```
-**You should be forwarded to the PCGL app.**
+**You will then be redirected to the PCGL application.**
 
 ----------------------------------------------
 
 ### Error pages
 
-The error page displays a user-friendly error message followed by the HTTP status code.	
+The error page displays a user-friendly error message followed by the HTTP status code.
 ```
 <main>
 {{ Header with the Response status text group }} //  Page not found 
@@ -207,7 +208,7 @@ The error page displays a user-friendly error message followed by the HTTP statu
 The form could be something like:
 ```
 Help us improve [Name of service]
-Do not include personal or financial information like your Social Insurance Number or credit card details.
+Do not include personal or financial information, such as your Social Insurance Number (SIN) or credit card details.
 What were you doing?
 What went wrong?
 ```
@@ -232,7 +233,7 @@ For the header, we can organize the elements as follows:
 ```
 
 > [!NOTE]
-> _What elements are mandatory and optional for us?_
+> _Which elements are mandatory and which are optional?_
 > 
 > The [**authentication component**](#authentication-components) is a MUST.
 >
@@ -255,7 +256,7 @@ For the header, we can organize the elements as follows:
 <summary><b>🚧 Account settings (Work in Progress)</b></summary>
 
 The settings page will have two sections: User Profile and Security, as well as a link to delete the account.
-What information is available?  `voPerson` ?
+What information is available? `voPerson`?
 This might not be relevant because the user technically will not have an account.
 </details>
 
@@ -282,12 +283,12 @@ For the account settings, we can organize the elements as follows:
 Definition of elements inside the footer.
 
 > [!NOTE]
-> _What elements are mandatory and optional for us?_
+> _Which elements are mandatory and which are optional?_
 >
 > The **meta information** is a MUST.
 > The rest of the elements are optional.
 
-For the elements inside a footer, let's combine what we know with the resources we want to mimic, like the UK Government. For this particular case, we used Nielsen Norman Group guidelines, which outline what a common user looks for in a footer.
+For the elements inside a footer, let's combine our requirements with established best practices, such as the UK Government Design System and Nielsen Norman Group guidelines, which outline what users typically look for in a footer.
 
  - Contextual header and links
  - Secondary header and navigation items
@@ -345,18 +346,18 @@ Definition of authentication component elements.
 
 
 > [!NOTE]
-> _What elements are mandatory and optional for us?_
+> _Which elements are mandatory and which are optional?_
 >
 > The **CILogon Identity Provider Button** is a MUST.
 
 
-**Login / Sign In / Sign Out / Log Out.**
+**Login / Sign In / Sign Out / Log Out**
 
-The login experience is provided by the CILogon Identity Provider. For example, see https://cilogon.org/example/
+The login experience is provided by the CILogon Identity Provider. For example, see the [CILogon example](https://cilogon.org/example/).
 
 
 > [!TIP]
-> CILogon has several [customization options][cilogon-config] that change the behavior and/or content of the CILogon website.
+> CILogon has several [customization options][cilogon-config] that change the behavior and content of the CILogon website.
 
 ----------------------------------------------
 
