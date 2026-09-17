@@ -4,37 +4,37 @@
 
 | key | Link or label | url | description |
 | :--- | :--- | :--- | :--- |
-| `pcglWebsite` | PCGL Website | https://genomelibrary.ca/ | |
-| `policies` | Policies & Guidelines | https://genomelibrary.ca/ | |
-| `privacy` | Privacy Policy | https://genomelibrary.ca/ | |
-| `termsConditions` | Terms & Conditions | https://genomelibrary.ca/about-us/ | |
-| `publicationPolicy` | Publication Policy | https://pan-canadian-genome-library.github.io/participant-public/resources | |
-| `helpGuides` | Help Guides | https://pan-canadian-genome-library.github.io/researcher/docs | |
-| `controlledDataUsers` | Controlled Data Users | https://pan-canadian-genome-library.github.io/researcher/resources/data-governance | |
-| `dataPlatform` | Data Platform | https://genomelibrary.ca/researchers/ | |
-| `researchPlatform` | Research Portal | https://genomelibrary.ca/researchers/ | |
-| `contact` | Contact Us | https://www.genomelibrary.ca/contact-us/ | |
-| `subscribe` | Subscribe to our mailing list | https://genomelibrary.ca/subscribe/ | |
-| `linkedin` | LinkedIn | https://www.linkedin.com/company/genome-library/ | |
-| `github` | GitHub | https://github.com/Pan-Canadian-Genome-Library | |
+| `pcglWebsite` | PCGL Website | https://genomelibrary.ca/ | about |
+| `policies` | Policies & Guidelines | https://genomelibrary.ca/ | about |
+| `privacy` | Privacy Policy | https://genomelibrary.ca/ | about |
+| `termsConditions` | Terms & Conditions | https://genomelibrary.ca/about-us/ | about |
+| `publicationPolicy` | Publication Policy | https://pan-canadian-genome-library.github.io/participant-public/resources | about |
+| `helpGuides` | Help Guides | https://pan-canadian-genome-library.github.io/researcher/docs | resources |
+| `controlledDataUsers` | Controlled Data Users | https://pan-canadian-genome-library.github.io/researcher/resources/data-governance | resources |
+| `dataPlatform` | Data Platform | https://genomelibrary.ca/researchers/ | resources |
+| `researchPlatform` | Research Portal | https://genomelibrary.ca/researchers/ | resources |
+| `contact` | Contact Us | https://www.genomelibrary.ca/contact-us/ | connect |
+| `subscribe` | Subscribe to our mailing list | https://genomelibrary.ca/subscribe/ | connect |
+| `linkedin` | LinkedIn | https://www.linkedin.com/company/genome-library/ | connect |
+| `github` | GitHub | https://github.com/Pan-Canadian-Genome-Library | connect |
 
 ## French (`fr`) — Links
 
 | key | Link or label | url | description |
 | :--- | :--- | :--- | :--- |
-| `pcglWebsite` | Site web de la BGPC | https://genomelibrary.ca/fr | |
-| `policies` | Politiques et directives | https://genomelibrary.ca/fr | |
-| `privacy` | Politique de confidentialité | https://genomelibrary.ca/fr | |
-| `termsConditions` | Conditions d'utilisation | https://genomelibrary.ca/fr | |
-| `publicationPolicy` | Politique de publication | https://pan-canadian-genome-library.github.io/fr/participant-public/resources | |
-| `helpGuides` | Guides d'aide | https://pan-canadian-genome-library.github.io/fr/participant-public/docs | |
-| `controlledDataUsers` | Utilisateurs de données contrôlées | https://pan-canadian-genome-library.github.io/fr/participant-public/overview | |
-| `dataPlatform` | Plateforme de données | https://genomelibrary.ca/fr/chercheurs/ | |
-| `researchPlatform` | Portail de recherche | https://genomelibrary.ca/fr/chercheurs/ | |
-| `contact` | Contactez-nous | https://genomelibrary.ca/fr/nous-joindre/ | |
-| `subscribe` | S'abonner | https://genomelibrary.ca/fr/abonnez-vous/ | |
-| `linkedin` | LinkedIn | https://fr.linkedin.com/company/genome-library/ | |
-| `github` | GitHub | https://github.com/Pan-Canadian-Genome-Library/?locale=fr-fr | |
+| `pcglWebsite` | Site web de la BGPC | https://genomelibrary.ca/fr | about |
+| `policies` | Politiques et directives | https://genomelibrary.ca/fr | about |
+| `privacy` | Politique de confidentialité | https://genomelibrary.ca/fr | about |
+| `termsConditions` | Conditions d'utilisation | https://genomelibrary.ca/fr | about |
+| `publicationPolicy` | Politique de publication | https://pan-canadian-genome-library.github.io/fr/participant-public/resources | about |
+| `helpGuides` | Guides d'aide | https://pan-canadian-genome-library.github.io/fr/participant-public/docs | resources |
+| `controlledDataUsers` | Utilisateurs de données contrôlées | https://pan-canadian-genome-library.github.io/fr/participant-public/overview | resources |
+| `dataPlatform` | Plateforme de données | https://genomelibrary.ca/fr/chercheurs/ | resources |
+| `researchPlatform` | Portail de recherche | https://genomelibrary.ca/fr/chercheurs/ | resources |
+| `contact` | Contactez-nous | https://genomelibrary.ca/fr/nous-joindre/ | connect |
+| `subscribe` | S'abonner | https://genomelibrary.ca/fr/abonnez-vous/ | connect |
+| `linkedin` | LinkedIn | https://fr.linkedin.com/company/genome-library/ | connect |
+| `github` | GitHub | https://github.com/Pan-Canadian-Genome-Library/?locale=fr-fr | connect |
 
 ## Additional Labels (`sections`, `meta`, `bento`)
 
