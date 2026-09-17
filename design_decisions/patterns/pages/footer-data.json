@@ -1,82 +1,165 @@
 {
-  "meta": {
-    "terms_conditions": {
-      "url": "/terms-and-conditions",
-      "children": {
-        "text": "Terms & Conditions"
+  "fr": {
+    "entities": {
+      "dataset_one": "Étude",
+      "dataset_other": "Études",
+      "individual_help": [
+        "Les $t(entities.individual_other) représentent une personne spécifique et peuvent avoir un ou plusieurs $t(entities.biosample_other, lowercase) associés, chacun avec des $t(entities.experiment_other, lowercase) associées."
+      ],
+      "biosample_one": "Spécimen",
+      "biosample_other": "Spécimens",
+      "biosample_help": [
+        "Les $t(entities.biosample_other, lowercase) sont du matériel biologique extrait d’$t(entities.individual_specific, lowercase) spécifique."
+      ]
+    },
+    "catalogue": {
+      "toolbar": {
+        "sort": {
+          "most_individuals": "Le plus de participants",
+          "most_biosamples": "Le plus de specimens"
+        }
       }
     },
-    "logo": {
-      "src": "/assets/images/company-logo-light.svg",
-      "alt": "Acme Corporation Logo",
-      "width": 180,
-      "height": 48
+    "biosample": {
+      "biosample_id": "Identifiant du specimen"
     },
-    "variant": "dark-mode"
-  },
-  "navigation": [
-    {
-      "renderTitle": {
-        "text": "Products"
-      },
-      "renderLinks": {
-        "items": [
-          {
-            "url": "/products/platform",
-            "children": { "text": "Our Platform" }
-          },
-          {
-            "url": "/products/pricing",
-            "children": { "text": "Pricing" }
-          },
-          {
-            "url": "/products/integrations",
-            "children": { "text": "Integrations" }
-          }
-        ]
-      }
+    "interpretations": {
+      "subject_or_biosample_id": "Identifiant du participant ou du specimen"
     },
-    {
-      "renderTitle": {
-        "text": "Resources"
+    "footer": {
+      "bento": {
+        "title": "À propos de Bento",
+        "c3g_copyright": "© C3G Copyright",
+        "powered_by": "Le portail de recherche de la BGPC est propulsé par",
+        "copyright": "©",
+        "bento": "la plateform Bento",
+        "terms_of_use": "Conditions d'utilisation (en anglais)",
+        "licensed_under": "Bento est sous licence",
+        "source_available": "Le code source est disponible sur",
+        "admin_link": "Admin"
       },
-      "renderLinks": {
-        "items": [
-          {
-            "url": "/blog",
-            "children": { "text": "Blog" }
-          },
-          {
-            "url": "/documentation",
-            "children": { "text": "Documentation" }
-          },
-          {
-            "url": "/community",
-            "children": { "text": "Community Forum" }
-          }
-        ]
-      }
-    },
-    {
-      "renderTitle": {
-        "text": "Company"
+      "meta": {
+        "funding_title": "Reconnaissance du financement",
+        "logo_alt": "Logo de la Bibliothèque génomique pancanadienne",
+        "cihr_logo_alt": "Logo des Instituts de recherche en santé du Canada",
+        "cihr_support": "La BGPC est soutenu par les Instituts de recherche en santé du Canada (IRSC)."
       },
-      "renderLinks": {
-        "items": [
-          {
-            "url": "/about",
-            "children": { "text": "About Us" }
-          },
-          {
-            "url": "/careers",
-            "children": { "text": "Careers" }
-          },
-          {
-            "url": "/contact",
-            "children": { "text": "Contact Us" }
-          }
-        ]
+      "sections": {
+        "about": "À propos de la BGPC",
+        "resources": "Ressources et documentation",
+        "connect": "Restez en contact"
+      },
+      "links": {
+        "pcglWebsite": "Site web de la BGPC",
+        "policies": "Politiques et directives",
+        "privacy": "Politique de confidentialité",
+        "termsConditions": "Conditions d'utilisation",
+        "publicationPolicy": "Politique de publication",
+        "helpGuides": "Guides d'aide",
+        "controlledDataUsers": "Utilisateurs de données contrôlées",
+        "dataPlatform": "Plateforme de données",
+        "researchPlatform": "Portail de recherche",
+        "contact": "Contactez-nous",
+        "subscribe": "S'abonner",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      },
+      "urls": {
+        "pcglWebsite": "https://genomelibrary.ca/fr",
+        "policies": "https://genomelibrary.ca/fr",
+        "privacy": "https://genomelibrary.ca/fr",
+        "termsConditions": "https://genomelibrary.ca/fr",
+        "publicationPolicy": "https://pan-canadian-genome-library.github.io/fr/participant-public/resources",
+        "helpGuides": "https://pan-canadian-genome-library.github.io/fr/participant-public/docs",
+        "controlledDataUsers": "https://pan-canadian-genome-library.github.io/fr/participant-public/overview",
+        "dataPlatform": "https://genomelibrary.ca/fr/chercheurs/",
+        "researchPlatform": "https://genomelibrary.ca/fr/chercheurs/",
+        "contact": "https://genomelibrary.ca/fr/nous-joindre/",
+        "subscribe": "https://genomelibrary.ca/fr/abonnez-vous/",
+        "linkedin": "https://fr.linkedin.com/company/genome-library/",
+        "github": "https://github.com/Pan-Canadian-Genome-Library/?locale=fr-fr"
       }
     }
-  ]
+  },
+  "en": {
+    "entities": {
+      "dataset_one": "Study",
+      "dataset_other": "Studies",
+      "individual_one": "Participant",
+      "individual_other": "Participants",
+      "individual_help": [
+        "$t(entities.individual_other) represent a specific person, and may have one or multiple associated $t(entities.biosample_other, lowercase), each with associated $t(entities.experiment_other)."
+      ],
+      "biosample_one": "Specimen",
+      "biosample_other": "Specimens",
+      "biosample_help": [
+        "$t(entities.biosample_other) are biological material extracted from a specific $t(entities.individual_one, lowercase)."
+      ]
+    },
+    "catalogue": {
+      "toolbar": {
+        "sort": {
+          "most_individuals": "Most participants",
+          "most_biosamples": "Most specimens"
+        }
+      }
+    },
+    "interpretations": {
+      "subject_or_biosample_id": "Participant or Specimen ID"
+    },
+    "footer": {
+      "bento": {
+        "title": "About Bento",
+        "c3g_copyright": "© C3G Copyright",
+        "powered_by": "The PCGL research portal is powered by",
+        "copyright": "©",
+        "bento": "the Bento platform",
+        "terms_of_use": "Terms of Use",
+        "licensed_under": "Bento is licensed under the",
+        "source_available": "The source code is available on",
+        "admin_link": "Admin"
+      },
+      "meta": {
+        "funding_title": "Acknowledgement of funding",
+        "logo_alt": "Pan-Canadian Genome Library logo",
+        "cihr_logo_alt": "Canadian Institutes of Health Research logo",
+        "cihr_support": "PCGL is supported by the Canadian Institutes of Health Research (CIHR)."
+      },
+      "sections": {
+        "about": "About PCGL",
+        "resources": "Resources & Documentation",
+        "connect": "Connect with us"
+      },
+      "links": {
+        "pcglWebsite": "PCGL Website",
+        "policies": "Policies & Guidelines",
+        "privacy": "Privacy Policy",
+        "termsConditions": "Terms & Conditions",
+        "publicationPolicy": "Publication Policy",
+        "helpGuides": "Help Guides",
+        "controlledDataUsers": "Controlled Data Users",
+        "dataPlatform": "Data Platform",
+        "researchPlatform": "Research Portal",
+        "contact": "Contact Us",
+        "subscribe": "Subscribe to our mailing list",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      },
+      "urls": {
+        "pcglWebsite": "https://genomelibrary.ca/",
+        "policies": "https://genomelibrary.ca/",
+        "privacy": "https://genomelibrary.ca/",
+        "termsConditions": "https://genomelibrary.ca/about-us/",
+        "publicationPolicy": "https://pan-canadian-genome-library.github.io/participant-public/resources",
+        "helpGuides": "https://pan-canadian-genome-library.github.io/researcher/docs",
+        "controlledDataUsers": "https://pan-canadian-genome-library.github.io/researcher/resources/data-governance",
+        "dataPlatform": "https://genomelibrary.ca/researchers/",
+        "researchPlatform": "https://genomelibrary.ca/researchers/",
+        "contact": "https://www.genomelibrary.ca/contact-us/",
+        "subscribe": "https://genomelibrary.ca/subscribe/",
+        "linkedin": "https://www.linkedin.com/company/genome-library/",
+        "github": "https://github.com/Pan-Canadian-Genome-Library"
+      }
+    }
+  }
 }
