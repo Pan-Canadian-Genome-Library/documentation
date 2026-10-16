@@ -31,8 +31,9 @@ _Government of Canada header design without the Signature Link_
 | Has Signature Mark    | Required to acknowledge CIHR support and promote research. |
 | Has main band    | Identifies links to common PCGL themes or services. |
 | Has contextual band    | Do we need specific links to the site or product? |
+| Has the branding guidelines   | Check the font, the colors, etc.  |
 
-
+[Brand Standards for the Genome Library](./BrandStandardsGenomeLibrary_2.0.pdf)
 
 [![Footer in Figma](https://figmage.com/images/omrbSuEDEOQUg48eGdpRi.png)](https://www.figma.com/design/x9uA02XOaDzi6QGGNxpuWJ/Ant-Design-System-for-Figma--Free-version---Community-?node-id=1143-178&t=q0WjkNykSAe0izih-1)
 
