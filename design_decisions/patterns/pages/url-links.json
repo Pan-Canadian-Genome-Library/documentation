@@ -2,30 +2,28 @@
   {
     "title": "about",
     "items": [
-      { "link": "pcglWebsite", "url": "pcglWebsite" },
-      { "link": "policies", "url": "policies" },
-      { "link": "privacy", "url": "privacy" },
-      { "link": "termsConditions", "url": "termsConditions" },
-      { "link": "publicationPolicy", "url": "publicationPolicy" }
+      { "label": "pcglWebsite", "href": "pcglWebsite" },
+      { "label": "policies", "href": "policies" },
+      { "label": "privacy", "href": "privacy" },
+      { "label": "termsConditions", "href": "termsConditions" },
+      { "label": "publicationPolicy", "href": "publicationPolicy" }
     ]
   },
   {
     "title": "resources",
     "items": [
-      { "link": "helpGuides", "url": "helpGuides" },
-      { "link": "dataSubmissionSystem", "url": "dataSubmissionSystem" },
-      { "link": "dacoPlatform", "url": "dacoPlatform" },
-      { "link": "researchPlatform", "url": "researchPlatform" },
-      { "link": "TRE", "url": "TRE" },
-      { "link": "participantPortal", "url": "participantPortal" }
+      { "label": "helpGuides", "href": "helpGuides" },
+      { "label": "dataSubmissionSystem", "href": "dataSubmissionSystem" },
+      { "label": "dacoPlatform", "href": "dacoPlatform" },
+      { "label": "researchPlatform", "href": "researchPlatform" }
     ]
   },
   {
     "title": "connect",
     "items": [
-      { "link": "contact", "url": "contact" },
-      { "link": "subscribe", "url": "subscribe" },
-      { "link": "linkedin", "url": "linkedin" }
+      { "label": "contact", "href": "contact" },
+      { "label": "subscribe", "href": "subscribe" },
+      { "label": "linkedin", "href": "linkedin" }
     ]
   }
 ]
