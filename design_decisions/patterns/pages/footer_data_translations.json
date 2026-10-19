@@ -1,0 +1,72 @@
+{
+  "fr": {
+    "meta": {
+      "fundingTitle": "Reconnaissance du financement",
+      "logoText": "Logo de la Bibliothèque génomique pancanadienne",
+      "cihrLogoText": "Logo des Instituts de recherche en santé du Canada",
+      "cihrSupportText": "La BGPC est soutenu par les Instituts de recherche en santé du Canada (IRSC)."
+    },
+    "section": {
+      "about": "À propos de la BGPC",
+      "resources": "Ressources et documentation",
+      "connect": "Restez en contact"
+    },
+    "label": {
+      "pcglWebsite": "Site web de la BGPC",
+      "publicationPolicy": "Politique de publication",
+      "helpGuides": "Guides d'aide",
+      "dataSubmissionSystem": "Système de soumission de données",
+      "dacoPlatform": "Le Bureau de conformité de l'accès aux données",
+      "researchPlatform": "Portail de recherche",
+      "contact": "Contactez-nous",
+      "subscribe": "S'abonner",
+      "linkedin": "LinkedIn"
+    },
+    "href": {
+      "pcglWebsite": "https://genomelibrary.ca/fr",
+      "publicationPolicy": "https://pan-canadian-genome-library.github.io/fr/researcher/publications-policies",
+      "helpGuides": "https://pan-canadian-genome-library.github.io/fr/participant-public/docs",
+      "dataSubmissionSystem": "https://submission-ui.submission.gateway.dev.k8s.pcgl.dev-sd4h.ca",
+      "dacoPlatform": "https://daco.submission.gateway.dev.k8s.pcgl.dev-sd4h.ca",
+      "researchPlatform": "https://research.gateway.dev.k8s.pcgl.dev-sd4h.ca/fr",
+      "contact": "https://genomelibrary.ca/fr/nous-joindre",
+      "subscribe": "https://genomelibrary.ca/fr/abonnez-vous",
+      "linkedin": "https://fr.linkedin.com/company/genome-library"
+    }
+  },
+  "en": {
+    "meta": {
+      "fundingTitle": "Acknowledgement of funding",
+      "logoText": "Pan-Canadian Genome Library logo",
+      "cihrLogoText": "Canadian Institutes of Health Research logo",
+      "cihrSupportText": "PCGL is supported by the Canadian Institutes of Health Research (CIHR)."
+    },
+    "section": {
+      "about": "About PCGL",
+      "resources": "Resources & Documentation",
+      "connect": "Connect with us"
+    },
+    "label": {
+      "pcglWebsite": "PCGL Website",
+      "publicationPolicy": "Publication Policy",
+      "helpGuides": "Help Guides",
+      "dataSubmissionSystem": "Data Submission System",
+      "dacoPlatform": "Data Access Compliance Office",
+      "researchPlatform": "Research Portal",
+      "contact": "Contact Us",
+      "subscribe": "Subscribe to our mailing list",
+      "linkedin": "LinkedIn"
+    },
+    "href": {
+      "pcglWebsite": "https://genomelibrary.ca",
+      "publicationPolicy": "https://pan-canadian-genome-library.github.io/researcher/publications-policies",
+      "helpGuides": "https://pan-canadian-genome-library.github.io/researcher/docs",
+      "dataSubmissionSystem": "https://submission-ui.submission.gateway.dev.k8s.pcgl.dev-sd4h.ca",
+      "dacoPlatform": "https://daco.submission.gateway.dev.k8s.pcgl.dev-sd4h.ca",
+      "researchPlatform": "https://research.gateway.dev.k8s.pcgl.dev-sd4h.ca",
+      "contact": "https://www.genomelibrary.ca/contact-us",
+      "subscribe": "https://genomelibrary.ca/subscribe",
+      "linkedin": "https://www.linkedin.com/company/genome-library"
+    }
+  }
+}

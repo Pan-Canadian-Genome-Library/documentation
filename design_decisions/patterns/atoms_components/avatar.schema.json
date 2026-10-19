@@ -1,0 +1,21 @@
+{
+  "$id": "atoms_components/avatar.schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Avatar",
+  "type": "object",
+  "properties": {
+    "src": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    }
+  },
+  "required": ["src", "alt", "width", "height"]
+}

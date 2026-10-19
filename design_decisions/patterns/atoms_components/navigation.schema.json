@@ -1,0 +1,15 @@
+{
+  "$id": "atoms_components/navigation.schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Navigation",
+  "type": "object",
+  "properties": {
+    "render_links": {
+      "type": "object"
+    },
+    "render_title": {
+      "type": "object"
+    }
+  },
+  "required": ["renderLinks"]
+}
