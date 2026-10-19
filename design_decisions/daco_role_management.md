@@ -13,7 +13,7 @@ This proposal covers only the permissions associated with the DAC Chair and Memb
 
 ## Setup
 
-* **COManage**: for each DAC, create two COManage groups for the Chair and Members (PCGL:DACO:Chair:dac_id, PCGL:DACO:Member:dac_id) 
+* **COManage**: for each DAC, create two COManage groups for the Chair and Members (PCGL:DACO:CHAIR:dac_id, PCGL:DACO:MEMBER:dac_id) 
 and associated enrollment flows following the [enrollment flow documention](../cilogon_comanage/enrollment_flows.md).
 * **Authz**: modify the Study object in authz to store the dac_id (this implies a change to the body of the API call used to 
 register a Study). Note that dac_id is an optional property, as Studies can be registered without specifying a DAC. 
