@@ -2,10 +2,6 @@
 
 This is the key document for understanding the footer structure. Below, we will describe the links and URLs for the main section of the footer.
 
-> [!IMPORTANT]
-> This document must mirror to what we have defined in [the PCGL deployment repository](https://github.com/Pan-Canadian-Genome-Library/deployment#environment-urls) to avoid broken links and errors.
-
-
 ## Main section
 
 ### English (`en`) — Links
@@ -15,9 +11,6 @@ This is the key document for understanding the footer structure. Below, we will 
 | `pcglWebsite` | PCGL Website | https://genomelibrary.ca | about |
 | `publicationPolicy` | Publication Policy | https://pan-canadian-genome-library.github.io/researcher/publications-policies | about |
 | `helpGuides` | Help Guides | https://pan-canadian-genome-library.github.io/researcher/docs | resources |
-| `dataSubmissionSystem` | Data Submission System | https://submission-ui.submission.gateway.dev.k8s.pcgl.dev-sd4h.ca | resources |
-| `dacoPlatform` | Data Access Compliance Office | https://daco.submission.gateway.dev.k8s.pcgl.dev-sd4h.ca | resources |
-| `researchPlatform` | Research Portal | https://research.gateway.dev.k8s.pcgl.dev-sd4h.ca | resources |
 | `contact` | Contact Us | https://www.genomelibrary.ca/contact-us | connect |
 | `subscribe` | Subscribe to our mailing list | https://genomelibrary.ca/subscribe | connect |
 | `linkedin` | LinkedIn | https://www.linkedin.com/company/genome-library | connect |
@@ -29,9 +22,6 @@ This is the key document for understanding the footer structure. Below, we will 
 | `pcglWebsite` | Site web de la BGPC | https://genomelibrary.ca/fr | about |
 | `publicationPolicy` | Politique de publication | https://pan-canadian-genome-library.github.io/fr/researcher/publications-policies | about |
 | `helpGuides` | Guides d'aide | https://pan-canadian-genome-library.github.io/fr/participant-public/docs | resources |
-| `dataSubmissionSystem` | Système de soumission de données | https://submission-ui.submission.gateway.dev.k8s.pcgl.dev-sd4h.ca/fr | resources |
-| `dacoPlatform` | Bureau de conformité d'accès aux données | https://daco.submission.gateway.dev.k8s.pcgl.dev-sd4h.ca/fr | resources |
-| `researchPlatform` | Portail de recherche | https://research.gateway.dev.k8s.pcgl.dev-sd4h.ca/fr| resources |
 | `contact` | Contactez-nous | https://genomelibrary.ca/fr/nous-joindre | connect |
 | `subscribe` | S'abonner | https://genomelibrary.ca/fr/abonnez-vous | connect |
 | `linkedin` | LinkedIn | https://fr.linkedin.com/company/genome-library | connect |
@@ -41,8 +31,12 @@ This is the key document for understanding the footer structure. Below, we will 
 This section contains metadata information and should not be changed. It will not be parameterized.
 
 > [!NOTE]
-> This section will include some pictures. 
+> communications@cihr-irsc.gc.ca. point me to the following asset to be feature on our website.
 
+![CIHR logo](./fip_wordmark.png)
+
+
+**Meta information example:**
 ```
 "meta": {
         "fundingTitle": "Reconnaissance du financement",

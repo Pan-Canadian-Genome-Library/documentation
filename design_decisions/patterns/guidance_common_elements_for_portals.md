@@ -1,14 +1,14 @@
 
 # Guide for Common Elements Across Portals
 
-[TL;DR: Figma Templates](/patterns/templates/figma.md)
+[TL;DR: Figma Templates](./templates/figma.md)
 
 We value contributions and feedback and want you to contribute effectively. To make your experience as smooth as possible, [please reach out to us first][contrib].
 
-### How to read this guide
+## How to read this guide
 Throughout this document, you will see HTML structures containing tokens like `{{ my_design_token }}`. This logicless syntax represents dynamic data.
 - **For Designers:** These tokens represent the elements or text nodes that need to be accounted for in your designs.
-- **For Developers:** Every token maps directly to a property in a corresponding `*.schema.json` file. These schemas dictate the strict data contract your React components must accept as props.
+- **For Developers:** These schemas dictate the strict data contract your React components must accept as props.
 
 > [!WARNING] 
 > **_Under construction labels_**
@@ -58,7 +58,13 @@ At the moment, we face some challenges trying to standardize the design token la
 ### Footer Template
 [🔗 definition](#footer) 
 
+ - The [storybook page for the Footer](https://pan-canadian-genome-library.github.io/pcgl-common-react-components/?path=/story/pcgl-footer--primary) is available to explore the API of the component and the details about the implementation.
+
+
+
 **Visual representation**
+
+This hopefully helps to visualize the elements inside the footer not the actual design.
 
 ```mermaid
 ---
@@ -79,29 +85,6 @@ treemap-beta
         "Links": 80
 
 ```
-
-**Specific to our case**
-
-**_Contact and support links_**
-- Help, questions and comments
-- Privacy policy
-- Accessibility statement
-- Terms and conditions
-
-**_Navigation links_**
-- Languages
-- License
-- Copyright
-
-**_Images_**
-- Image Logo
-
-**_Services_**
-- Administration & Identity
-- Data Submission System
-- Research Portal
-- Participant Portal
-- SD4H Infrastructure
 
 
 ### Header Template
@@ -290,33 +273,11 @@ Definition of elements inside the footer.
 
 For the elements inside a footer, let's combine our requirements with established best practices, such as the UK Government Design System and Nielsen Norman Group guidelines, which outline what users typically look for in a footer.
 
- - Contextual header and links
- - Secondary header and navigation items
- - Links to our services
- - Terms and conditions
- - Image Logo
-
-
-Example:
-```html
-<footer>
-  {{ contextual_header }}
-  {{ contextual_links }}
-  {{ images }}
-  {{ secondary_navigation }}
-  {{ services_links }}
-  {{ meta_information }}
-</footer>
-```
-
-| Design Token | Schema (Property) | Description |
-| --- | --- | --- |
-| `{{ contextual_header }}` | [`navigation.schema.json#/properties/renderTitle`][navigation-schema] | The title of the contextual area. |
-| `{{ contextual_links }}` | [`navigation.schema.json#/properties/renderLinks`][navigation-schema] | Links providing context to the current page. |
-| `{{ images }}` | [`avatar.schema.json`][avatar-schema] | Logos or visual elements displayed in the footer. |
-| `{{ secondary_navigation }}` | [`navigation.schema.json`][navigation-schema] | Links leading out of the service or to secondary areas. |
-| `{{ services_links }}` | [`navigation.schema.json`][navigation-schema] | Core service links like Privacy, Accessibility, Cookies, etc. |
-| `{{ meta_information }}` | [`footer-meta-item.schema.json`][footer-meta-schema] | Mandatory copyright or meta details. |
+ - Contextual header and links.
+ - Secondary header and navigation items.
+ - Links to our services, Terms and conditions and Contact.
+ - Meta information and funding recognition.
+ - Platform independent band to include logo or licensing.
 
 ----------------------------------------------
 
@@ -386,19 +347,17 @@ The authentication settings are managed by the identity provider organization.
 ### Internal Documentation
 - [Contribution Guidelines][contrib]
 - [Footer components][footer-data]
-- [Footer schema][footer-schema]
-- [Footer meta item schema][footer-meta-schema]
 - [Navigation schema][navigation-schema]
 - [Link schema][link-schema]
 - [Avatar schema][avatar-schema]
 
 
 
-[contrib]: /patterns/docs/CONTRIBUTING.md
+[contrib]: ./docs/CONTRIBUTING.md
 [cilogon-device]: https://www.cilogon.org/device
 [cilogon-skin]: https://www.cilogon.org/skins#h.52ndu647pi2y
 [cilogon-config]: https://cilogon.org/skin/config-example.xml
-[footer-data]: ./pages/footer-data.json
+[footer-data]: ./pages/footer.md
 [footer-schema]: ./organisms_landmarks/footer.schema.json
 [footer-meta-schema]: ./molecules_regions/footer-meta-item.schema.json
 [navigation-schema]: ./atoms_components/navigation.schema.json
