@@ -31,10 +31,9 @@ This is the key document for understanding the footer structure. Below, we will 
 This section contains metadata information and should not be changed. It will not be parameterized.
 
 > [!NOTE]
-> [CIHR](communications@cihr-irsc.gc.ca.) provide the asset for the Acknowledgement of funding.
-
-![CIHR logo](./fip_wordmark.png#gh-light-mode-only)
-
+> [CIHR](communications@cihr-irsc.gc.ca.) provide the asset for the acknowledgement of funding.
+> `fip_wordmark.png`
+> <img src="./fip_wordmark.png" alt="CIHR logo" style="background: white;" />
 
 **Meta information example:**
 ```
