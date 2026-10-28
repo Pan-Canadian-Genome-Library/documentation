@@ -8,17 +8,17 @@ The PCGL Header identity, documentation, definition, and properties are based on
 
 | Property            | Attribute            | Description| Type| Default     |
 | ------------------- | -------------------- | ---------- | --- | ----------- |
-| [accessibility_links](/patterns/atoms_components/link.schema.json) | `a11y-links` | Object containing hidden skip links for navigation accessibility. | `object`              | `{ url, children }` |
-| [menu_options](/patterns/atoms_components/navigation.schema.json) | `render-menu` | Slot containing the items for navigation. | `object`              | `undefined` |
-| [logo](/patterns/atoms_components/avatar.schema.json) | `logo` | Object containing the wordmark as an image wrapped inside an anchor or link. | `object`| `{ src, alt, width, height }` |
-| [lang](/patterns/atoms_components/link.schema.json)  | `render_lang`   | Slot for switching between available language versions. | `object`    | `undefined` |
+| [accessibility_links](../atoms_components/link.schema.json) | `a11y-links` | Object containing hidden skip links for navigation accessibility. | `object`              | `{ url, children }` |
+| [menu_options](../atoms_components/navigation.schema.json) | `render-menu` | Slot containing the items for navigation. | `object`              | `undefined` |
+| [logo](../atoms_components/avatar.schema.json) | `logo` | Object containing the wordmark as an image wrapped inside an anchor or link. | `object`| `{ src, alt, width, height }` |
+| [lang](../atoms_components/link.schema.json)  | `render_lang`   | Slot for switching between available language versions. | `object`    | `undefined` |
 | **search_bar**  | `render_search` | Slot for displaying a search bar. | `object`    | `undefined` |
-| [auth](/patterns/atoms_components/link.schema.json)  | `render_auth`   | Slot for displaying the authentication component. | `object`    | `undefined` |
+| [auth](../atoms_components/link.schema.json)  | `render_auth`   | Slot for displaying the authentication component. | `object`    | `undefined` |
 
 
 ## Slots
 
-[**render-menu**](/patterns/atoms_components/navigation.schema.json): Accepts a function to display contextual and external navigation items, such a hamburger menu for example.
+[**render-menu**](../atoms_components/navigation.schema.json): Accepts a function to display contextual and external navigation items, such a hamburger menu for example.
 
 **`render_lang`**: Accepts a function to display the language toggle component.	
 

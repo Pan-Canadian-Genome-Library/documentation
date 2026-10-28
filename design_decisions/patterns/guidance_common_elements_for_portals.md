@@ -16,9 +16,6 @@ Throughout this document, you will see HTML structures containing tokens like `{
 > Please note the sections marked with "under construction" symbols: 🚧 🏗️ 👷🏾‍♀️ 🦺 ⚠️
 > This document will point out the work in progress using construction symbols.
 
-At the moment, we face some challenges trying to standardize the design token language. The aim is to follow a standard so any application is capable of translating the design tokens into code or visualizations. We have chosen JSON given its versatility in representing data.
- - [ ] [Modular schemas ⚠️ 🏗️](https://json-schema.org/understanding-json-schema/structuring): To be considered if a CMS is introduced in the future.
-
 
 # Contents
 
@@ -208,9 +205,7 @@ For the header, we can organize the elements as follows:
 ```html
 {{ accessibility_links }}
 <header>
-  {{ menu_options }}
   {{ image_logo }}
-  {{ search_bar }}
   {{ authentication_components }}
 </header>
 ```
@@ -223,14 +218,6 @@ For the header, we can organize the elements as follows:
 > The **skip links component** is a MUST.
 >
 > The rest of the elements are optional.
-
-
-| Template Token | Schema Property | Description |
-| --- | --- | --- |
-| `{{ menu }}` | [`header.schema.json#/properties/render_menu`][header-schema] | List of navigation items for the main menu. |
-| `{{ image_logo }}` | [`link.schema.json`][link-schema] | URL, alt text, and link for the portal's logo. |
-| `{{ search_bar }}` | [`header.schema.json#/properties/render_search_bar`][header-schema] | Configuration for the search input component. |
-| `{{ authentication_components }}` | [Authentication Components](#authentication-components) | Mandatory user profile, login, or settings controls. |
 
 ----------------------------------------------
 
@@ -325,13 +312,6 @@ The login experience is provided by the CILogon Identity Provider. For example, 
 ### My Profile / Account Settings
 The authentication settings are managed by the identity provider organization.
 
-
- 
-## Components (Atoms)
-- Text
-- [Link][link-schema]
-- Button
-
 ## References
 
 ### Design Guidelines
@@ -347,9 +327,6 @@ The authentication settings are managed by the identity provider organization.
 ### Internal Documentation
 - [Contribution Guidelines][contrib]
 - [Footer components][footer-data]
-- [Navigation schema][navigation-schema]
-- [Link schema][link-schema]
-- [Avatar schema][avatar-schema]
 
 
 
@@ -358,11 +335,5 @@ The authentication settings are managed by the identity provider organization.
 [cilogon-skin]: https://www.cilogon.org/skins#h.52ndu647pi2y
 [cilogon-config]: https://cilogon.org/skin/config-example.xml
 [footer-data]: ./pages/footer.md
-[footer-schema]: ./organisms_landmarks/footer.schema.json
-[footer-meta-schema]: ./molecules_regions/footer-meta-item.schema.json
-[navigation-schema]: ./atoms_components/navigation.schema.json
-[link-schema]: ./atoms_components/link.schema.json
-[avatar-schema]: ./atoms_components/avatar.schema.json
-[header-schema]: ./organisms_landmarks/header.schema.json
 [menu_options]: ./#
 [search_bar]: ./#

@@ -6,4 +6,4 @@ The PCGL Footer identity, documentation, definition, and properties are based on
 
 > 🏗️🧱 The definition and documentation will be published in [The PCGL Common React Components](https://pan-canadian-genome-library.github.io/pcgl-common-react-components/?path=/docs/pcgl-footer--docs) 
 
-> Check out the [template](/patterns/templates/figma.md). This is a checklist of the elements inside the Footer not its formal parameters or actual arguments.
+> Check out the [template](../templates/figma.md). This is a checklist of the elements inside the Footer not its formal parameters or actual arguments.
