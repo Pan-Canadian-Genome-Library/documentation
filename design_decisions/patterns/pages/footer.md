@@ -11,7 +11,7 @@ This is the key document for understanding the footer structure. Below, we will 
 | `pcglWebsite` | PCGL Website | https://genomelibrary.ca | about |
 | `publicationPolicy` | Publication Policy | https://pan-canadian-genome-library.github.io/researcher/publications-policies | about |
 | `helpGuides` | Help Guides | https://pan-canadian-genome-library.github.io/researcher/docs | resources |
-| `contact` | Contact Us | https://www.genomelibrary.ca/contact-us | connect |
+| `contact` | Contact Us | https://genomelibrary.ca/contact-us | connect |
 | `subscribe` | Subscribe to our mailing list | https://genomelibrary.ca/subscribe | connect |
 | `linkedin` | LinkedIn | https://www.linkedin.com/company/genome-library | connect |
 
@@ -34,6 +34,10 @@ This section contains metadata information and should not be changed. It will no
 > [CIHR](communications@cihr-irsc.gc.ca.) provide the asset for the acknowledgement of funding.
 > `fip_wordmark.png`
 > <img src="./fip_wordmark.png" alt="CIHR logo" style="background: white;" />
+
+> [!WARNING]
+> The logo we are using as of October 2026 will likely change in the future.
+> <img src="./cihr_logo_footer.png" alt="CIHR logo" style="background: black;" />
 
 **Meta information example:**
 ```
